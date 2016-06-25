@@ -1,0 +1,1049 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>CodeIgniter v4.0.0 API » CodeIgniter</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">CodeIgniter v4.0.0 API</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/CodeIgniter.html"><i class="icon-th"></i> CodeIgniter</a></li>
+<li><a href="../namespaces/Psr.html"><i class="icon-th"></i> Psr</a></li>
+<li><a href="../namespaces/Zend.html"><i class="icon-th"></i> Zend</a></li>
+<li><a href="../namespaces/global.html"><i class="icon-th"></i> global</a></li>
+<li><a>Packages</a></li>
+<li><a href="../packages/CodeIgniter.html"><i class="icon-folder-open"></i> CodeIgniter</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">99</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">0</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-map-marker"></i> Packages</li>
+<li>
+<a href="../packages/CodeIgniter.html" title="CodeIgniter"><i class="icon-folder-open"></i>CodeIgniter</a><ul class="nav nav-list nav-packages">
+<li>
+<a href="../packages/CodeIgniter.Autoloader.html" title="Autoloader"><i class="icon-folder-open"></i>Autoloader</a><ul class="nav nav-list nav-packages"></ul>
+</li>
+<li>
+<a href="../packages/CodeIgniter.Benchmark.html" title="Benchmark"><i class="icon-folder-open"></i>Benchmark</a><ul class="nav nav-list nav-packages"></ul>
+</li>
+<li>
+<a href="../packages/CodeIgniter.Database.html" title="Database"><i class="icon-folder-open"></i>Database</a><ul class="nav nav-list nav-packages"></ul>
+</li>
+<li>
+<a href="../packages/CodeIgniter.Debug.html" title="Debug"><i class="icon-folder-open"></i>Debug</a><ul class="nav nav-list nav-packages"></ul>
+</li>
+<li>
+<a href="../packages/CodeIgniter.HTTP.html" title="HTTP"><i class="icon-folder-open"></i>HTTP</a><ul class="nav nav-list nav-packages"><li>
+<a href="../packages/CodeIgniter.HTTP.Files.html" title="Files"><i class="icon-folder-open"></i>Files</a><ul class="nav nav-list nav-packages"></ul>
+</li></ul>
+</li>
+<li>
+<a href="../packages/CodeIgniter.HTTPLite.html" title="HTTPLite"><i class="icon-folder-open"></i>HTTPLite</a><ul class="nav nav-list nav-packages"></ul>
+</li>
+<li>
+<a href="../packages/CodeIgniter.Log.html" title="Log"><i class="icon-folder-open"></i>Log</a><ul class="nav nav-list nav-packages"><li>
+<a href="../packages/CodeIgniter.Log.Handlers.html" title="Handlers"><i class="icon-folder-open"></i>Handlers</a><ul class="nav nav-list nav-packages"></ul>
+</li></ul>
+</li>
+<li>
+<a href="../packages/CodeIgniter.Router.html" title="Router"><i class="icon-folder-open"></i>Router</a><ul class="nav nav-list nav-packages"></ul>
+</li>
+<li>
+<a href="../packages/CodeIgniter.View.html" title="View"><i class="icon-folder-open"></i>View</a><ul class="nav nav-list nav-packages"></ul>
+</li>
+</ul>
+</li>
+<li class="nav-header">
+<i title="Functions" class="icon-custom icon-function"></i> Functions</li>
+<li class="function  "><a href="#function_base_url" title="base_url() :: Return the base URL to use in views"><span class="description">Return the base URL to use in views</span><pre>base_url</pre></a></li>
+<li class="function  "><a href="#function_csrf_hash" title="csrf_hash() :: Returns the current hash value for the CSRF protection."><span class="description">Returns the current hash value for the CSRF protection.</span><pre>csrf_hash</pre></a></li>
+<li class="function  "><a href="#function_csrf_token" title="csrf_token() :: Returns the CSRF token name."><span class="description">Returns the CSRF token name.</span><pre>csrf_token</pre></a></li>
+<li class="function  "><a href="#function_current_url" title="current_url() :: Current URL"><span class="description">Current URL</span><pre>current_url</pre></a></li>
+<li class="function  "><a href="#function_esc" title="esc() :: Performs simple auto-escaping of data for security reasons."><span class="description">Performs simple auto-escaping of data for security reasons.</span><pre>esc</pre></a></li>
+<li class="function  "><a href="#function_force_https" title="force_https() :: Used to force a page to be accessed in via HTTPS."><span class="description">Used to force a page to be accessed in via HTTPS.</span><pre>force_https</pre></a></li>
+<li class="function  "><a href="#function_helper" title="helper() :: Loads a helper file into memory. Supports namespaced helpers,
+both in and out of the 'helpers' directory of a namespaced directory."><span class="description">Loads a helper file into memory. Supports namespaced helpers,
+both in and out of the 'helpers' directory of a namespaced directory.</span><pre>helper</pre></a></li>
+<li class="function  "><a href="#function_index_page" title="index_page() :: Index page"><span class="description">Index page</span><pre>index_page</pre></a></li>
+<li class="function  "><a href="#function_is_cli" title="is_cli() :: Is CLI?"><span class="description">Is CLI?</span><pre>is_cli</pre></a></li>
+<li class="function  "><a href="#function_log_message" title="log_message() :: A convenience/compatibility method for logging events through
+the Log system."><span class="description">A convenience/compatibility method for logging events through
+the Log system.</span><pre>log_message</pre></a></li>
+<li class="function  "><a href="#function_redirect" title="redirect() :: Convenience method that works with the current global $request and
+$router instances to redirect using named/reverse-routed routes
+to determine the URL to go to. If nothing is found, will treat
+as a traditional redirect and pass the string in, letting
+$response-&gt;redirect() determine the correct method and code."><span class="description">Convenience method that works with the current global $request and
+$router instances to redirect using named/reverse-routed routes
+to determine the URL to go to. If nothing is found, will treat
+as a traditional redirect and pass the string in, letting
+$response-&gt;redirect() determine the correct method and code.</span><pre>redirect</pre></a></li>
+<li class="function  "><a href="#function_remove_invisible_characters" title="remove_invisible_characters() :: Remove Invisible Characters"><span class="description">Remove Invisible Characters</span><pre>remove_invisible_characters</pre></a></li>
+<li class="function  "><a href="#function_route_to" title="route_to() :: Given a controller/method string and any params,
+will attempt to build the relative URL to the
+matching route."><span class="description">Given a controller/method string and any params,
+will attempt to build the relative URL to the
+matching route.</span><pre>route_to</pre></a></li>
+<li class="function  "><a href="#function_service" title="service() :: Allows cleaner access to the Services Config file."><span class="description">Allows cleaner access to the Services Config file.</span><pre>service</pre></a></li>
+<li class="function  "><a href="#function_session" title="session() :: A convenience method for accessing the session instance,
+or an item that has been set in the session."><span class="description">A convenience method for accessing the session instance,
+or an item that has been set in the session.</span><pre>session</pre></a></li>
+<li class="function  "><a href="#function_shared_service" title="shared_service() :: Allow cleaner access to shared services"><span class="description">Allow cleaner access to shared services</span><pre>shared_service</pre></a></li>
+<li class="function  "><a href="#function_site_url" title="site_url() :: Return a site URL to use in views"><span class="description">Return a site URL to use in views</span><pre>site_url</pre></a></li>
+<li class="function  "><a href="#function_timer" title="timer() :: A convenience method for working with the timer."><span class="description">A convenience method for working with the timer.</span><pre>timer</pre></a></li>
+<li class="function  "><a href="#function_uri_string" title="uri_string() :: URL String"><span class="description">URL String</span><pre>uri_string</pre></a></li>
+<li class="function  "><a href="#function_view" title="view() :: Grabs the current RenderableInterface-compatible class
+and tells it to render the specified view. Simply provides
+a convenience method that can be used in Controllers,
+libraries, and routed closures."><span class="description">Grabs the current RenderableInterface-compatible class
+and tells it to render the specified view. Simply provides
+a convenience method that can be used in Controllers,
+libraries, and routed closures.</span><pre>view</pre></a></li>
+<li class="nav-header">
+<i title="Interfaces" class="icon-custom icon-interface"></i> Interfaces</li>
+<li><a href="#HandlerInterface" title="CodeIgniter">HandlerInterface</a></li>
+<li class="nav-header">
+<i title="Classes" class="icon-custom icon-class"></i> Classes</li>
+<li><a href="#URI" title="CodeIgniter">URI</a></li>
+<li><a href="#ComposerScripts" title="ComposerScripts">ComposerScripts</a></li>
+<li><a href="#FileLocator" title="Class Loader">FileLocator</a></li>
+<li><a href="#Controller" title="Class Controller">Controller</a></li>
+<li><a href="#Model" title="Class Model">Model</a></li>
+<li><a href="#Message" title="CodeIgniter">Message</a></li>
+<li class="nav-header">
+<i title="Constants" class="icon-custom icon-constant"></i> Constants</li>
+<li class="constant  "><a href="#constant_HOOKS_PRIORITY_LOW" title="HOOKS_PRIORITY_LOW() :: CodeIgniter"><span class="description">CodeIgniter</span><pre>HOOKS_PRIORITY_LOW</pre></a></li>
+</ul>
+</div>
+<div class="span8 package-contents">
+<ul class="breadcrumb"><li>
+<a href="../index.html"><i class="icon-folder-open"></i></a><span class="divider">\</span><li class="active"><a href="../packages/CodeIgniter.html">CodeIgniter</a></li>
+</li></ul>
+<div class="package-indent">
+<h3>
+<i title="Functions" class="icon-custom icon-function"></i> Functions</h3>
+<a xmlns:php="http://php.net/xsl" id="function_base_url"></a><div xmlns:php="http://php.net/xsl" class="element clickable function  function_base_url " data-toggle="collapse" data-target=".function_base_url .collapse" title="">
+<h2>Return the base URL to use in views</h2>
+<pre>base_url(string $path<code> = ''</code>, string $scheme<code> = null</code>) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>package</th>
+<td><a href="../packages/CodeIgniter.html">CodeIgniter</a></td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$path</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$scheme</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a xmlns:php="http://php.net/xsl" id="function_csrf_hash"></a><div xmlns:php="http://php.net/xsl" class="element clickable function  function_csrf_hash " data-toggle="collapse" data-target=".function_csrf_hash .collapse" title="">
+<h2>Returns the current hash value for the CSRF protection.</h2>
+<pre>csrf_hash() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Can be used in Views when building hidden inputs manually,
+or used in javascript vars for API usage.</p></div>
+<table class="table table-bordered"><tr>
+<th>package</th>
+<td><a href="../packages/CodeIgniter.html">CodeIgniter</a></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a xmlns:php="http://php.net/xsl" id="function_csrf_token"></a><div xmlns:php="http://php.net/xsl" class="element clickable function  function_csrf_token " data-toggle="collapse" data-target=".function_csrf_token .collapse" title="">
+<h2>Returns the CSRF token name.</h2>
+<pre>csrf_token() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Can be used in Views when building hidden inputs manually,
+or used in javascript vars when using APIs.</p></div>
+<table class="table table-bordered"><tr>
+<th>package</th>
+<td><a href="../packages/CodeIgniter.html">CodeIgniter</a></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a xmlns:php="http://php.net/xsl" id="function_current_url"></a><div xmlns:php="http://php.net/xsl" class="element clickable function  function_current_url " data-toggle="collapse" data-target=".function_current_url .collapse" title="">
+<h2>Current URL</h2>
+<pre>current_url(\bool $returnObject<code> = false</code>) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Returns the full URL (including segments) of the page where this
+function is placed</p></div>
+<table class="table table-bordered"><tr>
+<th>package</th>
+<td><a href="../packages/CodeIgniter.html">CodeIgniter</a></td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$returnObject</h4></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a xmlns:php="http://php.net/xsl" id="function_esc"></a><div xmlns:php="http://php.net/xsl" class="element clickable function  function_esc " data-toggle="collapse" data-target=".function_esc .collapse" title="">
+<h2>Performs simple auto-escaping of data for security reasons.</h2>
+<pre>esc(string|array $data, string $context<code> = 'html'</code>, string $encoding<code> = null</code>) : \$data</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Might consider making this more complex at a later date.</p>
+<p>If $data is a string, then it simply escapes and returns it.
+If $data is an array, then it loops over it, escaping each
+'value' of the key/value pairs.</p>
+<p>Valid context values: html, js, css, url, attr, raw, null</p></div>
+<table class="table table-bordered"><tr>
+<th>package</th>
+<td><a href="../packages/CodeIgniter.html">CodeIgniter</a></td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$data</h4>
+<code>string</code><code>array</code>
+</div>
+<div class="subelement argument">
+<h4>$context</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$encoding</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\$data</code></div>
+</div></div>
+</div>
+<a xmlns:php="http://php.net/xsl" id="function_force_https"></a><div xmlns:php="http://php.net/xsl" class="element clickable function  function_force_https " data-toggle="collapse" data-target=".function_force_https .collapse" title="">
+<h2>Used to force a page to be accessed in via HTTPS.</h2>
+<pre>force_https(integer $duration<code> = 31536000</code>, \CodeIgniter\HTTP\RequestInterface $request<code> = null</code>, \CodeIgniter\HTTP\ResponseInterface $response<code> = null</code>) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Uses a standard redirect, plus will set the HSTS header
+for modern browsers that support, which gives best
+protection against man-in-the-middle attacks.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/CodeIgniter.html">CodeIgniter</a></td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security"></a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$duration</h4>
+<code>integer</code><p>How long should the SSL header be set for? (in seconds)
+Defaults to 1 year.</p></div>
+<div class="subelement argument">
+<h4>$request</h4>
+<code>\CodeIgniter\HTTP\RequestInterface</code>
+</div>
+<div class="subelement argument">
+<h4>$response</h4>
+<code>\CodeIgniter\HTTP\ResponseInterface</code>
+</div>
+</div></div>
+</div>
+<a xmlns:php="http://php.net/xsl" id="function_helper"></a><div xmlns:php="http://php.net/xsl" class="element clickable function  function_helper " data-toggle="collapse" data-target=".function_helper .collapse" title="">
+<h2>Loads a helper file into memory. Supports namespaced helpers,
+both in and out of the 'helpers' directory of a namespaced directory.</h2>
+<pre>helper(string $filename) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>package</th>
+<td><a href="../packages/CodeIgniter.html">CodeIgniter</a></td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$filename</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a xmlns:php="http://php.net/xsl" id="function_index_page"></a><div xmlns:php="http://php.net/xsl" class="element clickable function  function_index_page " data-toggle="collapse" data-target=".function_index_page .collapse" title="">
+<h2>Index page</h2>
+<pre>index_page() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Returns the &quot;index_page&quot; from your config file</p></div>
+<table class="table table-bordered"><tr>
+<th>package</th>
+<td><a href="../packages/CodeIgniter.html">CodeIgniter</a></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a xmlns:php="http://php.net/xsl" id="function_is_cli"></a><div xmlns:php="http://php.net/xsl" class="element clickable function  function_is_cli " data-toggle="collapse" data-target=".function_is_cli .collapse" title="">
+<h2>Is CLI?</h2>
+<pre>is_cli() : boolean</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Test to see if a request was made from the command line.</p></div>
+<table class="table table-bordered"><tr>
+<th>package</th>
+<td><a href="../packages/CodeIgniter.html">CodeIgniter</a></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>boolean</code></div>
+</div></div>
+</div>
+<a xmlns:php="http://php.net/xsl" id="function_log_message"></a><div xmlns:php="http://php.net/xsl" class="element clickable function  function_log_message " data-toggle="collapse" data-target=".function_log_message .collapse" title="">
+<h2>A convenience/compatibility method for logging events through
+the Log system.</h2>
+<pre>log_message(string $level, string $message, array|null $context<code> = array()</code>) : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Allowed log levels are:</p>
+<ul>
+<li>emergency</li>
+<li>alert</li>
+<li>critical</li>
+<li>error</li>
+<li>warning</li>
+<li>notice</li>
+<li>info</li>
+<li>debug</li>
+</ul></div>
+<table class="table table-bordered"><tr>
+<th>package</th>
+<td><a href="../packages/CodeIgniter.html">CodeIgniter</a></td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$level</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$message</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$context</h4>
+<code>array</code><code>null</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>mixed</code></div>
+</div></div>
+</div>
+<a xmlns:php="http://php.net/xsl" id="function_redirect"></a><div xmlns:php="http://php.net/xsl" class="element clickable function  function_redirect " data-toggle="collapse" data-target=".function_redirect .collapse" title="">
+<h2>Convenience method that works with the current global $request and
+$router instances to redirect using named/reverse-routed routes
+to determine the URL to go to. If nothing is found, will treat
+as a traditional redirect and pass the string in, letting
+$response-&gt;redirect() determine the correct method and code.</h2>
+<pre>redirect(string $uri, $params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>If more control is needed, you must use $response-&gt;redirect explicitly.</p></div>
+<table class="table table-bordered"><tr>
+<th>package</th>
+<td><a href="../packages/CodeIgniter.html">CodeIgniter</a></td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$uri</h4>
+<code>string</code>
+</div>
+<div class="subelement argument"><h4>$params</h4></div>
+</div></div>
+</div>
+<a xmlns:php="http://php.net/xsl" id="function_remove_invisible_characters"></a><div xmlns:php="http://php.net/xsl" class="element clickable function  function_remove_invisible_characters " data-toggle="collapse" data-target=".function_remove_invisible_characters .collapse" title="">
+<h2>Remove Invisible Characters</h2>
+<pre>remove_invisible_characters(string $str, boolean $url_encoded<code> = TRUE</code>) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>This prevents sandwiching null characters
+between ascii characters, like Java\0script.</p></div>
+<table class="table table-bordered"><tr>
+<th>package</th>
+<td><a href="../packages/CodeIgniter.html">CodeIgniter</a></td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$str</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$url_encoded</h4>
+<code>boolean</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a xmlns:php="http://php.net/xsl" id="function_route_to"></a><div xmlns:php="http://php.net/xsl" class="element clickable function  function_route_to " data-toggle="collapse" data-target=".function_route_to .collapse" title="">
+<h2>Given a controller/method string and any params,
+will attempt to build the relative URL to the
+matching route.</h2>
+<pre>route_to(string $method, \...$params $params) : \CodeIgniter\Router\string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>NOTE: This requires the controller/method to
+have a route defined in the routes Config file.</p></div>
+<table class="table table-bordered"><tr>
+<th>package</th>
+<td><a href="../packages/CodeIgniter.html">CodeIgniter</a></td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$method</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$params</h4>
+<code>\...$params</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\CodeIgniter\Router\string</code></div>
+</div></div>
+</div>
+<a xmlns:php="http://php.net/xsl" id="function_service"></a><div xmlns:php="http://php.net/xsl" class="element clickable function  function_service " data-toggle="collapse" data-target=".function_service .collapse" title="">
+<h2>Allows cleaner access to the Services Config file.</h2>
+<pre>service(string $name, \...$params $params) : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>These are equal:</p>
+<ul>
+<li>$timer = service('timer')</li>
+<li>$timer = \CodeIgniter\Services::timer();</li>
+</ul></div>
+<table class="table table-bordered"><tr>
+<th>package</th>
+<td><a href="../packages/CodeIgniter.html">CodeIgniter</a></td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$params</h4>
+<code>\...$params</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>mixed</code></div>
+</div></div>
+</div>
+<a xmlns:php="http://php.net/xsl" id="function_session"></a><div xmlns:php="http://php.net/xsl" class="element clickable function  function_session " data-toggle="collapse" data-target=".function_session .collapse" title="">
+<h2>A convenience method for accessing the session instance,
+or an item that has been set in the session.</h2>
+<pre>session(null $val<code> = null</code>) : \CodeIgniter\Session\Session | null | void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Examples:
+session()-&gt;set('foo', 'bar');
+$foo = session('bar');</p></div>
+<table class="table table-bordered"><tr>
+<th>package</th>
+<td><a href="../packages/CodeIgniter.html">CodeIgniter</a></td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$val</h4>
+<code>null</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>\CodeIgniter\Session\Session</code><code>null</code><code>void</code>
+</div>
+</div></div>
+</div>
+<a xmlns:php="http://php.net/xsl" id="function_shared_service"></a><div xmlns:php="http://php.net/xsl" class="element clickable function  function_shared_service " data-toggle="collapse" data-target=".function_shared_service .collapse" title="">
+<h2>Allow cleaner access to shared services</h2>
+<pre>shared_service(string $name, array|null $params) : \type</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>package</th>
+<td><a href="../packages/CodeIgniter.html">CodeIgniter</a></td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$params</h4>
+<code>array</code><code>null</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\type</code></div>
+</div></div>
+</div>
+<a xmlns:php="http://php.net/xsl" id="function_site_url"></a><div xmlns:php="http://php.net/xsl" class="element clickable function  function_site_url " data-toggle="collapse" data-target=".function_site_url .collapse" title="">
+<h2>Return a site URL to use in views</h2>
+<pre>site_url(string $path<code> = ''</code>, string|null $scheme<code> = null</code>) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>package</th>
+<td><a href="../packages/CodeIgniter.html">CodeIgniter</a></td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$path</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$scheme</h4>
+<code>string</code><code>null</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a xmlns:php="http://php.net/xsl" id="function_timer"></a><div xmlns:php="http://php.net/xsl" class="element clickable function  function_timer " data-toggle="collapse" data-target=".function_timer .collapse" title="">
+<h2>A convenience method for working with the timer.</h2>
+<pre>timer(string|null $name<code> = null</code>) : $this | \CodeIgniter\Debug\Timer | mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>If no parameter is passed, it will return the timer instance,
+otherwise will start or stop the timer intelligently.</p></div>
+<table class="table table-bordered"><tr>
+<th>package</th>
+<td><a href="../packages/CodeIgniter.html">CodeIgniter</a></td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code><code>null</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>$this</code><code>\CodeIgniter\Debug\Timer</code><code>mixed</code>
+</div>
+</div></div>
+</div>
+<a xmlns:php="http://php.net/xsl" id="function_uri_string"></a><div xmlns:php="http://php.net/xsl" class="element clickable function  function_uri_string " data-toggle="collapse" data-target=".function_uri_string .collapse" title="">
+<h2>URL String</h2>
+<pre>uri_string() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Returns the URI segments.</p></div>
+<table class="table table-bordered"><tr>
+<th>package</th>
+<td><a href="../packages/CodeIgniter.html">CodeIgniter</a></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a xmlns:php="http://php.net/xsl" id="function_view"></a><div xmlns:php="http://php.net/xsl" class="element clickable function  function_view " data-toggle="collapse" data-target=".function_view .collapse" title="">
+<h2>Grabs the current RenderableInterface-compatible class
+and tells it to render the specified view. Simply provides
+a convenience method that can be used in Controllers,
+libraries, and routed closures.</h2>
+<pre>view(string $name, array $data<code> = array()</code>, array $options<code> = array()</code>) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>NOTE: Does not provide any escaping of the data, so that must
+all be handled manually by the developer.</p></div>
+<table class="table table-bordered"><tr>
+<th>package</th>
+<td><a href="../packages/CodeIgniter.html">CodeIgniter</a></td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$data</h4>
+<code>array</code>
+</div>
+<div class="subelement argument">
+<h4>$options</h4>
+<code>array</code><p>Unused - reserved for third-party extensions.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<h3>
+<i title="Classes" class="icon-custom icon-class"></i> Classes, interfaces, and traits</h3>
+<div xmlns:php="http://php.net/xsl" id="HandlerInterface" class="element ajax clickable interface">
+<h1>HandlerInterface<a href="../classes/CodeIgniter.Log.Handlers.HandlerInterface.html">¶</a>
+</h1>
+<p class="short_description">CodeIgniter</p>
+<div class="details collapse"></div>
+<a href="../classes/CodeIgniter.Log.Handlers.HandlerInterface.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="FileLocator" class="element ajax clickable class">
+<h1>FileLocator<a href="../classes/CodeIgniter.Autoloader.FileLocator.html">¶</a>
+</h1>
+<p class="short_description">Class Loader</p>
+<div class="details collapse"></div>
+<a href="../classes/CodeIgniter.Autoloader.FileLocator.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="ComposerScripts" class="element ajax clickable class">
+<h1>ComposerScripts<a href="../classes/CodeIgniter.ComposerScripts.html">¶</a>
+</h1>
+<p class="short_description">ComposerScripts</p>
+<div class="details collapse"></div>
+<a href="../classes/CodeIgniter.ComposerScripts.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="Controller" class="element ajax clickable class">
+<h1>Controller<a href="../classes/CodeIgniter.Controller.html">¶</a>
+</h1>
+<p class="short_description">Class Controller</p>
+<div class="details collapse"></div>
+<a href="../classes/CodeIgniter.Controller.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="Message" class="element ajax clickable class">
+<h1>Message<a href="../classes/CodeIgniter.HTTP.Message.html">¶</a>
+</h1>
+<p class="short_description">CodeIgniter</p>
+<div class="details collapse"></div>
+<a href="../classes/CodeIgniter.HTTP.Message.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="URI" class="element ajax clickable class">
+<h1>URI<a href="../classes/CodeIgniter.HTTP.URI.html">¶</a>
+</h1>
+<p class="short_description">CodeIgniter</p>
+<div class="details collapse"></div>
+<a href="../classes/CodeIgniter.HTTP.URI.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="Model" class="element ajax clickable class">
+<h1>Model<a href="../classes/CodeIgniter.Model.html">¶</a>
+</h1>
+<p class="short_description">Class Model</p>
+<div class="details collapse"></div>
+<a href="../classes/CodeIgniter.Model.html" class="more">« More »</a>
+</div>
+<h3>
+<i title="Constants" class="icon-custom icon-constant"></i> Constants</h3>
+<a xmlns:php="http://php.net/xsl" id="constant_HOOKS_PRIORITY_LOW"> </a><div xmlns:php="http://php.net/xsl" class="element clickable constant  constant_HOOKS_PRIORITY_LOW" data-toggle="collapse" data-target=".constant_HOOKS_PRIORITY_LOW .collapse" title="">
+<h2>CodeIgniter</h2>
+<pre>HOOKS_PRIORITY_LOW = 200 </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>An open source application development framework for PHP</p>
+<p>This content is released under the MIT License (MIT)</p>
+<p>Copyright (c) 2014 - 2016, British Columbia Institute of Technology</p>
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the &quot;Software&quot;), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:</p>
+<p>The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.</p>
+<p>THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/CodeIgniter.html">CodeIgniter</a></td>
+</tr>
+<tr>
+<th>author</th>
+<td><a href="">CodeIgniter Dev Team</a></td>
+</tr>
+<tr>
+<th>copyright</th>
+<td>Copyright (c) 2014 - 2016, British Columbia Institute of Technology (http://bcit.ca/)</td>
+</tr>
+<tr>
+<th>license</th>
+<td><a href="http://opensource.org/licenses/MIT">MIT License</a></td>
+</tr>
+<tr>
+<th>link</th>
+<td><a href="http://codeigniter.com">http://codeigniter.com</a></td>
+</tr>
+<tr>
+<th>since</th>
+<td>Version 3.0.0</td>
+</tr>
+<tr>
+<th>filesource</th>
+<td></td>
+</tr>
+</table>
+</div></div>
+</div>
+<ul class="breadcrumb"><li>
+<a href="../index.html"><i class="icon-folder-open"></i></a><span class="divider">\</span><li><a href="../packages/CodeIgniter.html">CodeIgniter</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../packages/CodeIgniter.Autoloader.html">Autoloader</a>
+</li>
+</li></ul>
+<div class="package-indent">
+<h3>
+<i title="Classes" class="icon-custom icon-class"></i> Classes, interfaces, and traits</h3>
+<div xmlns:php="http://php.net/xsl" id="Autoloader" class="element ajax clickable class">
+<h1>Autoloader<a href="../classes/CodeIgniter.Autoloader.Autoloader.html">¶</a>
+</h1>
+<p class="short_description">CodeIgniter Autoloader</p>
+<div class="details collapse"></div>
+<a href="../classes/CodeIgniter.Autoloader.Autoloader.html" class="more">« More »</a>
+</div>
+</div>
+<ul class="breadcrumb"><li>
+<a href="../index.html"><i class="icon-folder-open"></i></a><span class="divider">\</span><li><a href="../packages/CodeIgniter.html">CodeIgniter</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../packages/CodeIgniter.Benchmark.html">Benchmark</a>
+</li>
+</li></ul>
+<div class="package-indent">
+<h3>
+<i title="Classes" class="icon-custom icon-class"></i> Classes, interfaces, and traits</h3>
+<div xmlns:php="http://php.net/xsl" id="Timer" class="element ajax clickable class">
+<h1>Timer<a href="../classes/CodeIgniter.Debug.Timer.html">¶</a>
+</h1>
+<p class="short_description">Class Timer</p>
+<div class="details collapse"></div>
+<a href="../classes/CodeIgniter.Debug.Timer.html" class="more">« More »</a>
+</div>
+</div>
+<ul class="breadcrumb"><li>
+<a href="../index.html"><i class="icon-folder-open"></i></a><span class="divider">\</span><li><a href="../packages/CodeIgniter.html">CodeIgniter</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../packages/CodeIgniter.Database.html">Database</a>
+</li>
+</li></ul>
+<div class="package-indent">
+<h3>
+<i title="Classes" class="icon-custom icon-class"></i> Classes, interfaces, and traits</h3>
+<div xmlns:php="http://php.net/xsl" id="ConnectionInterface" class="element ajax clickable interface">
+<h1>ConnectionInterface<a href="../classes/CodeIgniter.Database.ConnectionInterface.html">¶</a>
+</h1>
+<p class="short_description">Interface ConnectionInterface</p>
+<div class="details collapse"></div>
+<a href="../classes/CodeIgniter.Database.ConnectionInterface.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="QueryInterface" class="element ajax clickable interface">
+<h1>QueryInterface<a href="../classes/CodeIgniter.Database.QueryInterface.html">¶</a>
+</h1>
+<p class="short_description">Interface QueryInterface</p>
+<div class="details collapse"></div>
+<a href="../classes/CodeIgniter.Database.QueryInterface.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="BaseBuilder" class="element ajax clickable class">
+<h1>BaseBuilder<a href="../classes/CodeIgniter.Database.BaseBuilder.html">¶</a>
+</h1>
+<p class="short_description">Class BaseBuilder</p>
+<div class="details collapse"></div>
+<a href="../classes/CodeIgniter.Database.BaseBuilder.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="Database" class="element ajax clickable class">
+<h1>Database<a href="../classes/CodeIgniter.Database.Database.html">¶</a>
+</h1>
+<p class="short_description">Database Connection Factory</p>
+<div class="details collapse"></div>
+<a href="../classes/CodeIgniter.Database.Database.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="Query" class="element ajax clickable class">
+<h1>Query<a href="../classes/CodeIgniter.Database.Query.html">¶</a>
+</h1>
+<p class="short_description">Query builder</p>
+<div class="details collapse"></div>
+<a href="../classes/CodeIgniter.Database.Query.html" class="more">« More »</a>
+</div>
+</div>
+<ul class="breadcrumb"><li>
+<a href="../index.html"><i class="icon-folder-open"></i></a><span class="divider">\</span><li><a href="../packages/CodeIgniter.html">CodeIgniter</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../packages/CodeIgniter.Debug.html">Debug</a>
+</li>
+</li></ul>
+<div class="package-indent">
+<h3>
+<i title="Classes" class="icon-custom icon-class"></i> Classes, interfaces, and traits</h3>
+<div xmlns:php="http://php.net/xsl" id="Toolbar" class="element ajax clickable class">
+<h1>Toolbar<a href="../classes/CodeIgniter.Debug.Toolbar.html">¶</a>
+</h1>
+<p class="short_description">Debug Toolbar</p>
+<div class="details collapse"></div>
+<a href="../classes/CodeIgniter.Debug.Toolbar.html" class="more">« More »</a>
+</div>
+</div>
+<ul class="breadcrumb"><li>
+<a href="../index.html"><i class="icon-folder-open"></i></a><span class="divider">\</span><li><a href="../packages/CodeIgniter.html">CodeIgniter</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../packages/CodeIgniter.HTTP.html">HTTP</a>
+</li>
+</li></ul>
+<div class="package-indent">
+<h3>
+<i title="Classes" class="icon-custom icon-class"></i> Classes, interfaces, and traits</h3>
+<div xmlns:php="http://php.net/xsl" id="UploadedFileInterface" class="element ajax clickable interface">
+<h1>UploadedFileInterface<a href="../classes/CodeIgniter.HTTP.Files.UploadedFileInterface.html">¶</a>
+</h1>
+<p class="short_description">Value object representing a single file uploaded through an
+HTTP request. Used by the IncomingRequest class to
+provide files.</p>
+<div class="details collapse"></div>
+<a href="../classes/CodeIgniter.HTTP.Files.UploadedFileInterface.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="ResponseInterface" class="element ajax clickable interface">
+<h1>ResponseInterface<a href="../classes/CodeIgniter.HTTP.ResponseInterface.html">¶</a>
+</h1>
+<p class="short_description">Representation of an outgoing, getServer-side response.</p>
+<div class="details collapse"></div>
+<a href="../classes/CodeIgniter.HTTP.ResponseInterface.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="CLI" class="element ajax clickable class">
+<h1>CLI<a href="../classes/CodeIgniter.CLI.CLI.html">¶</a>
+</h1>
+<p class="short_description">Class CLI</p>
+<div class="details collapse"></div>
+<a href="../classes/CodeIgniter.CLI.CLI.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="CLIRequest" class="element ajax clickable class">
+<h1>CLIRequest<a href="../classes/CodeIgniter.HTTP.CLIRequest.html">¶</a>
+</h1>
+<p class="short_description">Class CLIRequest</p>
+<div class="details collapse"></div>
+<a href="../classes/CodeIgniter.HTTP.CLIRequest.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="ContentSecurityPolicy" class="element ajax clickable class">
+<h1>ContentSecurityPolicy<a href="../classes/CodeIgniter.HTTP.ContentSecurityPolicy.html">¶</a>
+</h1>
+<p class="short_description">Class ContentSecurityPolicy</p>
+<div class="details collapse"></div>
+<a href="../classes/CodeIgniter.HTTP.ContentSecurityPolicy.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="UploadedFile" class="element ajax clickable class">
+<h1>UploadedFile<a href="../classes/CodeIgniter.HTTP.Files.UploadedFile.html">¶</a>
+</h1>
+<p class="short_description">Value object representing a single file uploaded through an
+HTTP request. Used by the IncomingRequest class to
+provide files.</p>
+<div class="details collapse"></div>
+<a href="../classes/CodeIgniter.HTTP.Files.UploadedFile.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="Header" class="element ajax clickable class">
+<h1>Header<a href="../classes/CodeIgniter.HTTP.Header.html">¶</a>
+</h1>
+<p class="short_description">Class Header</p>
+<div class="details collapse"></div>
+<a href="../classes/CodeIgniter.HTTP.Header.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="Negotiate" class="element ajax clickable class">
+<h1>Negotiate<a href="../classes/CodeIgniter.HTTP.Negotiate.html">¶</a>
+</h1>
+<p class="short_description">Class Negotiate</p>
+<div class="details collapse"></div>
+<a href="../classes/CodeIgniter.HTTP.Negotiate.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="Response" class="element ajax clickable class">
+<h1>Response<a href="../classes/CodeIgniter.HTTP.Response.html">¶</a>
+</h1>
+<p class="short_description">Representation of an outgoing, getServer-side response.</p>
+<div class="details collapse"></div>
+<a href="../classes/CodeIgniter.HTTP.Response.html" class="more">« More »</a>
+</div>
+<ul class="breadcrumb"><li>
+<a href="../index.html"><i class="icon-folder-open"></i></a><span class="divider">\</span><li><a href="../packages/CodeIgniter.html">CodeIgniter</a></li>
+<li>
+<span class="divider">\</span><a href="../packages/CodeIgniter.HTTP.html">HTTP</a>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../packages/CodeIgniter.HTTP.Files.html">Files</a>
+</li>
+</li></ul>
+<div class="package-indent">
+<h3>
+<i title="Classes" class="icon-custom icon-class"></i> Classes, interfaces, and traits</h3>
+<div xmlns:php="http://php.net/xsl" id="FileCollection" class="element ajax clickable class">
+<h1>FileCollection<a href="../classes/CodeIgniter.HTTP.Files.FileCollection.html">¶</a>
+</h1>
+<p class="short_description">Class FileCollection</p>
+<div class="details collapse"></div>
+<a href="../classes/CodeIgniter.HTTP.Files.FileCollection.html" class="more">« More »</a>
+</div>
+</div>
+</div>
+<ul class="breadcrumb"><li>
+<a href="../index.html"><i class="icon-folder-open"></i></a><span class="divider">\</span><li><a href="../packages/CodeIgniter.html">CodeIgniter</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../packages/CodeIgniter.HTTPLite.html">HTTPLite</a>
+</li>
+</li></ul>
+<div class="package-indent">
+<h3>
+<i title="Classes" class="icon-custom icon-class"></i> Classes, interfaces, and traits</h3>
+<div xmlns:php="http://php.net/xsl" id="CURLRequest" class="element ajax clickable class">
+<h1>CURLRequest<a href="../classes/CodeIgniter.HTTP.CURLRequest.html">¶</a>
+</h1>
+<p class="short_description">Class OutgoingRequest</p>
+<div class="details collapse"></div>
+<a href="../classes/CodeIgniter.HTTP.CURLRequest.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="IncomingRequest" class="element ajax clickable class">
+<h1>IncomingRequest<a href="../classes/CodeIgniter.HTTP.IncomingRequest.html">¶</a>
+</h1>
+<p class="short_description">Class IncomingRequest</p>
+<div class="details collapse"></div>
+<a href="../classes/CodeIgniter.HTTP.IncomingRequest.html" class="more">« More »</a>
+</div>
+</div>
+<ul class="breadcrumb"><li>
+<a href="../index.html"><i class="icon-folder-open"></i></a><span class="divider">\</span><li><a href="../packages/CodeIgniter.html">CodeIgniter</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../packages/CodeIgniter.Log.html">Log</a>
+</li>
+</li></ul>
+<div class="package-indent">
+<h3>
+<i title="Classes" class="icon-custom icon-class"></i> Classes, interfaces, and traits</h3>
+<div xmlns:php="http://php.net/xsl" id="LoggerInterface" class="element ajax clickable interface">
+<h1>LoggerInterface<a href="../classes/Psr.Log.LoggerInterface.html">¶</a>
+</h1>
+<p class="short_description">Describes a logger instance</p>
+<div class="details collapse"></div>
+<a href="../classes/Psr.Log.LoggerInterface.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="Logger" class="element ajax clickable class">
+<h1>Logger<a href="../classes/CodeIgniter.Log.Logger.html">¶</a>
+</h1>
+<p class="short_description">The CodeIgntier Logger</p>
+<div class="details collapse"></div>
+<a href="../classes/CodeIgniter.Log.Logger.html" class="more">« More »</a>
+</div>
+<ul class="breadcrumb"><li>
+<a href="../index.html"><i class="icon-folder-open"></i></a><span class="divider">\</span><li><a href="../packages/CodeIgniter.html">CodeIgniter</a></li>
+<li>
+<span class="divider">\</span><a href="../packages/CodeIgniter.Log.html">Log</a>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../packages/CodeIgniter.Log.Handlers.html">Handlers</a>
+</li>
+</li></ul>
+<div class="package-indent">
+<h3>
+<i title="Classes" class="icon-custom icon-class"></i> Classes, interfaces, and traits</h3>
+<div xmlns:php="http://php.net/xsl" id="ChromeLoggerHandler" class="element ajax clickable class">
+<h1>ChromeLoggerHandler<a href="../classes/CodeIgniter.Log.Handlers.ChromeLoggerHandler.html">¶</a>
+</h1>
+<p class="short_description">Class ChromeLoggerHandler</p>
+<div class="details collapse"></div>
+<a href="../classes/CodeIgniter.Log.Handlers.ChromeLoggerHandler.html" class="more">« More »</a>
+</div>
+</div>
+</div>
+<ul class="breadcrumb"><li>
+<a href="../index.html"><i class="icon-folder-open"></i></a><span class="divider">\</span><li><a href="../packages/CodeIgniter.html">CodeIgniter</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../packages/CodeIgniter.Router.html">Router</a>
+</li>
+</li></ul>
+<div class="package-indent">
+<h3>
+<i title="Classes" class="icon-custom icon-class"></i> Classes, interfaces, and traits</h3>
+<div xmlns:php="http://php.net/xsl" id="RouteCollectionInterface" class="element ajax clickable interface">
+<h1>RouteCollectionInterface<a href="../classes/CodeIgniter.Router.RouteCollectionInterface.html">¶</a>
+</h1>
+<p class="short_description">Interface RouteCollectionInterface</p>
+<div class="details collapse"></div>
+<a href="../classes/CodeIgniter.Router.RouteCollectionInterface.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="RouteCollection" class="element ajax clickable class">
+<h1>RouteCollection<a href="../classes/CodeIgniter.Router.RouteCollection.html">¶</a>
+</h1>
+<p class="short_description">Class RouteCollection</p>
+<div class="details collapse"></div>
+<a href="../classes/CodeIgniter.Router.RouteCollection.html" class="more">« More »</a>
+</div>
+</div>
+<ul class="breadcrumb"><li>
+<a href="../index.html"><i class="icon-folder-open"></i></a><span class="divider">\</span><li><a href="../packages/CodeIgniter.html">CodeIgniter</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../packages/CodeIgniter.View.html">View</a>
+</li>
+</li></ul>
+<div class="package-indent">
+<h3>
+<i title="Classes" class="icon-custom icon-class"></i> Classes, interfaces, and traits</h3>
+<div xmlns:php="http://php.net/xsl" id="RenderableInterface" class="element ajax clickable interface">
+<h1>RenderableInterface<a href="../classes/CodeIgniter.View.RenderableInterface.html">¶</a>
+</h1>
+<p class="short_description">Interface RenderableInterface</p>
+<div class="details collapse"></div>
+<a href="../classes/CodeIgniter.View.RenderableInterface.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="View" class="element ajax clickable class">
+<h1>View<a href="../classes/CodeIgniter.View.View.html">¶</a>
+</h1>
+<p class="short_description">Class View</p>
+<div class="details collapse"></div>
+<a href="../classes/CodeIgniter.View.View.html" class="more">« More »</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.8.5</a> and<br>
+            generated on 2016-06-05T21:36:15-07:00.<br></footer></div>
+</div>
+</body>
+</html>
