@@ -100,6 +100,7 @@
 <li class="toctree-l2"><a class="reference internal" href="logging.html">Logging Information</a></li>
 <li class="toctree-l2"><a class="reference internal" href="errors.html">Error Handling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="debugging.html">Debugging Your Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="caching.html">Web Page Caching</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cli.html">Running via the CLI</a></li>
 <li class="toctree-l2"><a class="reference internal" href="managing_apps.html">Managing your Applications</a></li>
 <li class="toctree-l2"><a class="reference internal" href="environments.html">Handling Multiple Environments</a></li>
@@ -247,6 +248,7 @@
 <li class="toctree-l2"><a class="reference internal" href="logging.html">Logging Information</a></li>
 <li class="toctree-l2"><a class="reference internal" href="errors.html">Error Handling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="debugging.html">Debugging Your Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="caching.html">Web Page Caching</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cli.html">Running via the CLI</a></li>
 <li class="toctree-l2"><a class="reference internal" href="managing_apps.html">Managing your Applications</a></li>
 <li class="toctree-l2"><a class="reference internal" href="environments.html">Handling Multiple Environments</a></li>
@@ -426,6 +428,33 @@ When doing so you will need to include the directory name loading the view.  Exa
 </pre></div>
 </div>
 </div>
+<div class="section" id="namespaced-views">
+<h2>Namespaced Views<a class="headerlink" href="#namespaced-views" title="Permalink to this headline">¶</a></h2>
+<p>You can store views under a <strong>View</strong> directory that is namespaced, and load that view as if it was namespaced. While
+PHP does not support loading non-class files from a namespace, CodeIgniter provides this feature to make it possible
+to package your views together in a module-like fashion for easy re-use or distribution.</p>
+<p>If you have <tt class="docutils literal"><span class="pre">Blog</span></tt> directory that has a PSR-4 mapping setup in the <a class="reference internal" href="../concepts/autoloader.html"><em>Autoloader</em></a> living
+under the namespace <tt class="docutils literal"><span class="pre">Example\Blog</span></tt>, you could retrieve view files as if they were namespaced also. Following this
+example, you could load the <strong>BlogView</strong> file from <strong>/blog/views</strong> by prepending the namespace to the view name:</p>
+<div class="highlight-ci"><div class="highlight"><pre><span class="k">echo</span> <span class="nx">view</span><span class="p">(</span><span class="s1">&#39;Example\Blog\BlogView&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="caching-views">
+<h2>Caching Views<a class="headerlink" href="#caching-views" title="Permalink to this headline">¶</a></h2>
+<p>You can cache a view with the <tt class="docutils literal"><span class="pre">view</span></tt> command by passing a <tt class="docutils literal"><span class="pre">cache</span></tt> option with the number of seconds to cache
+the view for, in the third parameter:</p>
+<div class="highlight-ci"><div class="highlight"><pre><span class="c1">// Cache the view for 60 seconds</span>
+<span class="k">echo</span> <span class="nx">view</span><span class="p">(</span><span class="s1">&#39;file_name&#39;</span><span class="p">,</span> <span class="nv">$data</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;cache&#39;</span> <span class="o">=&gt;</span> <span class="mi">60</span><span class="p">]);</span>
+</pre></div>
+</div>
+<p>By default, the view will be cached using the same name as the view file itself. You can customize this by passing
+along <tt class="docutils literal"><span class="pre">cache_name</span></tt> and the cache ID you wish to use:</p>
+<div class="highlight-ci"><div class="highlight"><pre><span class="c1">// Cache the view for 60 seconds</span>
+<span class="k">echo</span> <span class="nx">view</span><span class="p">(</span><span class="s1">&#39;file_name&#39;</span><span class="p">,</span> <span class="nv">$data</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;cache&#39;</span> <span class="o">=&gt;</span> <span class="mi">60</span><span class="p">,</span> <span class="s1">&#39;cache_name&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;my_cached_view&#39;</span><span class="p">]);</span>
+</pre></div>
+</div>
+</div>
 <div class="section" id="adding-dynamic-data-to-the-view">
 <h2>Adding Dynamic Data to the View<a class="headerlink" href="#adding-dynamic-data-to-the-view" title="Permalink to this headline">¶</a></h2>
 <p>Data is passed from the controller to the view by way of an array in the second parameter of the view function.
@@ -599,6 +628,66 @@ typically be in the form of a multi-dimensional array.</p>
 </pre></div>
 </div>
 </div>
+<div class="section" id="view-cells">
+<h2>View Cells<a class="headerlink" href="#view-cells" title="Permalink to this headline">¶</a></h2>
+<p>View Cells allow you to insert HTML that is generated outside of your controller. It simply calls the specified
+class and method, which must return valid HTML. This method could be in an callable method, found in any class
+that the autoloader can locate. The only restriction is that the class can not have any constructor parameters.
+This is intended to be used within views, and is a great aid to modularizing your code.</p>
+<div class="highlight-ci"><div class="highlight"><pre><span class="o">&lt;?=</span> <span class="nx">view_cell</span><span class="p">(</span><span class="s1">&#39;\App\Libraries\Blog::recentPosts&#39;</span><span class="p">)</span> <span class="cp">?&gt;</span>
+</pre></div>
+</div>
+<p>In this example, the class <tt class="docutils literal"><span class="pre">App\Libraries\Blog`</span> <span class="pre">is</span> <span class="pre">loaded,</span> <span class="pre">and</span> <span class="pre">the</span> <span class="pre">method</span> <span class="pre">``recentPosts()</span></tt> is ran. That method
+must return a string with the generated HTML. The method used can be either a static method or not. Either way works.</p>
+<div class="section" id="cell-parameters">
+<h3>Cell Parameters<a class="headerlink" href="#cell-parameters" title="Permalink to this headline">¶</a></h3>
+<p>You can further refine the call by passing a string with a list of parameters in the second parameter that are passed
+to the method as an array of key/value pairs:</p>
+<div class="highlight-ci"><div class="highlight"><pre><span class="o">&lt;?=</span> <span class="nx">view_cell</span><span class="p">(</span><span class="s1">&#39;\App\Libraries\Blog::recentPosts&#39;</span><span class="p">,</span> <span class="s1">&#39;category=codeigniter, limit=5&#39;</span><span class="p">)</span> <span class="cp">?&gt;</span>
+
+public function recentPosts(array $params=[])
+{
+    $posts = $this-&gt;blogModel-&gt;where(&#39;category&#39;, $params[&#39;category&#39;])
+                             -&gt;orderBy(&#39;published_on&#39;, &#39;desc&#39;)
+                             -&gt;limit($params[&#39;limit&#39;])
+                             -&gt;get();
+
+    return view(&#39;recentPosts&#39;, [&#39;posts&#39; =&gt; $posts]);
+}
+</pre></div>
+</div>
+<p>Additionally, you can use parameter names that match the parameter variables in the method for better readability.
+When you use it this way, all of the parameters must always be specified in the view cell call:</p>
+<div class="highlight-ci"><div class="highlight"><pre><span class="o">&lt;?=</span> <span class="nx">view_cell</span><span class="p">(</span><span class="s1">&#39;\App\Libraries\Blog::recentPosts&#39;</span><span class="p">,</span> <span class="s1">&#39;category=codeigniter, limit=5&#39;</span><span class="p">)</span> <span class="cp">?&gt;</span>
+
+public function recentPosts(int $limit, string $category)
+{
+    $posts = $this-&gt;blogModel-&gt;where(&#39;category&#39;, $category)
+                             -&gt;orderBy(&#39;published_on&#39;, &#39;desc&#39;)
+                             -&gt;limit($limit)
+                             -&gt;get();
+
+    return view(&#39;recentPosts&#39;, [&#39;posts&#39; =&gt; $posts]);
+}
+</pre></div>
+</div>
+</div>
+<div class="section" id="cell-caching">
+<h3>Cell Caching<a class="headerlink" href="#cell-caching" title="Permalink to this headline">¶</a></h3>
+<p>You can cache the results of the view cell call by passing the number of seconds to cache the data for as the
+third parameter. This will use the currently configured cache engine.</p>
+<div class="highlight-ci"><div class="highlight"><pre><span class="c1">// Cache the view for 5 minutes</span>
+<span class="o">&lt;?=</span> <span class="nx">view_cell</span><span class="p">(</span><span class="s1">&#39;\App\Libraries\Blog::recentPosts&#39;</span><span class="p">,</span> <span class="s1">&#39;limit=5&#39;</span><span class="p">,</span> <span class="mi">300</span><span class="p">)</span> <span class="cp">?&gt;</span>
+</pre></div>
+</div>
+<p>You can provide a custom name to use instead of the auto-generated one if you like, by passing the new name
+as the fourth parameter.:</p>
+<div class="highlight-ci"><div class="highlight"><pre><span class="c1">// Cache the view for 5 minutes</span>
+<span class="o">&lt;?=</span> <span class="nx">view_cell</span><span class="p">(</span><span class="s1">&#39;\App\Libraries\Blog::recentPosts&#39;</span><span class="p">,</span> <span class="s1">&#39;limit=5&#39;</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="s1">&#39;newcacheid&#39;</span><span class="p">)</span> <span class="cp">?&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 
 
@@ -620,7 +709,7 @@ typically be in the form of a multi-dimensional array.</p>
   <div role="contentinfo">
     <p>
         &copy; Copyright 2014 - 2016, British Columbia Institute of Technology.
-       Last updated on Jun 26, 2016.
+       Last updated on Jul 02, 2016.
     </p>
   </div>
 
