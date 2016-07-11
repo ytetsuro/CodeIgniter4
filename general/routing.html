@@ -100,6 +100,7 @@
 <li class="toctree-l2"><a class="reference internal" href="logging.html">Logging Information</a></li>
 <li class="toctree-l2"><a class="reference internal" href="errors.html">Error Handling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="debugging.html">Debugging Your Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="caching.html">Web Page Caching</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cli.html">Running via the CLI</a></li>
 <li class="toctree-l2"><a class="reference internal" href="managing_apps.html">Managing your Applications</a></li>
 <li class="toctree-l2"><a class="reference internal" href="environments.html">Handling Multiple Environments</a></li>
@@ -111,6 +112,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../libraries/index.html">Library Reference</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../libraries/benchmark.html">Benchmarking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../libraries/caching.html">Caching Driver</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../libraries/cli.html">CLI Library</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../libraries/content_negotiation.html">Content Negotiation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../libraries/curlrequest.html">CURLRequest Class</a></li>
@@ -247,6 +249,7 @@
 <li class="toctree-l2"><a class="reference internal" href="logging.html">Logging Information</a></li>
 <li class="toctree-l2"><a class="reference internal" href="errors.html">Error Handling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="debugging.html">Debugging Your Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="caching.html">Web Page Caching</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cli.html">Running via the CLI</a></li>
 <li class="toctree-l2"><a class="reference internal" href="managing_apps.html">Managing your Applications</a></li>
 <li class="toctree-l2"><a class="reference internal" href="environments.html">Handling Multiple Environments</a></li>
@@ -258,6 +261,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../libraries/index.html">Library Reference</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../libraries/benchmark.html">Benchmarking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../libraries/caching.html">Caching Driver</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../libraries/cli.html">CLI Library</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../libraries/content_negotiation.html">Content Negotiation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../libraries/curlrequest.html">CURLRequest Class</a></li>
@@ -444,9 +448,8 @@ used for readability.</p>
 <li><strong>(:num)</strong> will match any integer.</li>
 <li><strong>(:alpha)</strong> will match any string of alphabetic characters</li>
 <li><strong>(:alphanum)</strong> will match any string of alphabetic characters or integers, or any combination of the two.</li>
-<li><strong>(:hash)</strong> is the same as <strong>:segment</strong>, but can be used to easily see which routes use hashed ids (see the</li>
+<li><strong>(:hash)</strong> is the same as <strong>:segment</strong>, but can be used to easily see which routes use hashed ids (see the <a class="reference internal" href="../database/model.html"><em>Model</em></a> docs).</li>
 </ul>
-<p><a class="reference internal" href="../database/model.html"><em>Model</em></a> docs.</p>
 </div>
 <div class="section" id="examples">
 <h2><a class="toc-backref" href="#id4">Examples</a><a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
@@ -897,7 +900,7 @@ a valid class/method pair, just like you would show in any route, or a Closure:<
   <div role="contentinfo">
     <p>
         &copy; Copyright 2014 - 2016, British Columbia Institute of Technology.
-       Last updated on Jun 27, 2016.
+       Last updated on Jul 11, 2016.
     </p>
   </div>
 

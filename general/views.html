@@ -112,6 +112,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../libraries/index.html">Library Reference</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../libraries/benchmark.html">Benchmarking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../libraries/caching.html">Caching Driver</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../libraries/cli.html">CLI Library</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../libraries/content_negotiation.html">Content Negotiation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../libraries/curlrequest.html">CURLRequest Class</a></li>
@@ -260,6 +261,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../libraries/index.html">Library Reference</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../libraries/benchmark.html">Benchmarking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../libraries/caching.html">Caching Driver</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../libraries/cli.html">CLI Library</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../libraries/content_negotiation.html">Content Negotiation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../libraries/curlrequest.html">CURLRequest Class</a></li>
@@ -350,7 +352,7 @@
   <div class="section" id="views">
 <h1>Views<a class="headerlink" href="#views" title="Permalink to this headline">¶</a></h1>
 <p>A view is simply a web page, or a page fragment, like a header, footer, sidebar, etc. In fact,
-views can flexibly be embedded within other views (within other views, etc., etc.) if you need
+views can flexibly be embedded within other views (within other views, etc.) if you need
 this type of hierarchy.</p>
 <p>Views are never called directly, they must be loaded by a controller. Remember that in an MVC framework,
 the Controller acts as the traffic cop, so it is responsible for fetching a particular view. If you have
@@ -637,7 +639,7 @@ This is intended to be used within views, and is a great aid to modularizing you
 <div class="highlight-ci"><div class="highlight"><pre><span class="o">&lt;?=</span> <span class="nx">view_cell</span><span class="p">(</span><span class="s1">&#39;\App\Libraries\Blog::recentPosts&#39;</span><span class="p">)</span> <span class="cp">?&gt;</span>
 </pre></div>
 </div>
-<p>In this example, the class <tt class="docutils literal"><span class="pre">App\Libraries\Blog`</span> <span class="pre">is</span> <span class="pre">loaded,</span> <span class="pre">and</span> <span class="pre">the</span> <span class="pre">method</span> <span class="pre">``recentPosts()</span></tt> is ran. That method
+<p>In this example, the class <tt class="docutils literal"><span class="pre">App\Libraries\Blog</span></tt> is loaded, and the method <tt class="docutils literal"><span class="pre">recentPosts()</span></tt> is ran. That method
 must return a string with the generated HTML. The method used can be either a static method or not. Either way works.</p>
 <div class="section" id="cell-parameters">
 <h3>Cell Parameters<a class="headerlink" href="#cell-parameters" title="Permalink to this headline">¶</a></h3>

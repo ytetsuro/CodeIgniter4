@@ -100,6 +100,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../general/logging.html">Logging Information</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../general/errors.html">Error Handling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../general/debugging.html">Debugging Your Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/caching.html">Web Page Caching</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../general/cli.html">Running via the CLI</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../general/managing_apps.html">Managing your Applications</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../general/environments.html">Handling Multiple Environments</a></li>
@@ -111,6 +112,7 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Library Reference</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="benchmark.html">Benchmarking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="caching.html">Caching Driver</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cli.html">CLI Library</a></li>
 <li class="toctree-l2"><a class="reference internal" href="content_negotiation.html">Content Negotiation</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="">CURLRequest Class</a></li>
@@ -247,6 +249,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../general/logging.html">Logging Information</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../general/errors.html">Error Handling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../general/debugging.html">Debugging Your Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/caching.html">Web Page Caching</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../general/cli.html">Running via the CLI</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../general/managing_apps.html">Managing your Applications</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../general/environments.html">Handling Multiple Environments</a></li>
@@ -258,6 +261,7 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Library Reference</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="benchmark.html">Benchmarking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="caching.html">Caching Driver</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cli.html">CLI Library</a></li>
 <li class="toctree-l2"><a class="reference internal" href="content_negotiation.html">Content Negotiation</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="">CURLRequest Class</a></li>
@@ -363,7 +367,7 @@ will provide it, so please check with your host to verify if you run into proble
 <div class="section" id="loading-the-library">
 <h2>Loading the Library<a class="headerlink" href="#loading-the-library" title="Permalink to this headline">¶</a></h2>
 <p>The library can be loaded either manually or through the <a class="reference internal" href="../concepts/services.html"><em>Services class</em></a>.</p>
-<p>To load with the Services class call the <a href="#id1"><span class="problematic" id="id2">``</span></a>curlrequest()` method:</p>
+<p>To load with the Services class call the <tt class="docutils literal"><span class="pre">curlrequest()</span></tt> method:</p>
 <div class="highlight-ci"><div class="highlight"><pre><span class="nv">$client</span> <span class="o">=</span> <span class="nx">CodeIgniter\HTTP\Services</span><span class="o">::</span><span class="na">curlrequest</span><span class="p">();</span>
 </pre></div>
 </div>
@@ -742,7 +746,7 @@ $client-&gt;request(&#8216;GET&#8217;, &#8216;/&#8217;, [&#8216;version&#8217; =
   <div role="contentinfo">
     <p>
         &copy; Copyright 2014 - 2016, British Columbia Institute of Technology.
-       Last updated on Jun 26, 2016.
+       Last updated on Jul 11, 2016.
     </p>
   </div>
 
