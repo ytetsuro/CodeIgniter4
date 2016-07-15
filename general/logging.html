@@ -100,6 +100,7 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="">Logging Information</a></li>
 <li class="toctree-l2"><a class="reference internal" href="errors.html">Error Handling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="debugging.html">Debugging Your Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="caching.html">Web Page Caching</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cli.html">Running via the CLI</a></li>
 <li class="toctree-l2"><a class="reference internal" href="managing_apps.html">Managing your Applications</a></li>
 <li class="toctree-l2"><a class="reference internal" href="environments.html">Handling Multiple Environments</a></li>
@@ -111,6 +112,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../libraries/index.html">Library Reference</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../libraries/benchmark.html">Benchmarking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../libraries/caching.html">Caching Driver</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../libraries/cli.html">CLI Library</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../libraries/content_negotiation.html">Content Negotiation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../libraries/curlrequest.html">CURLRequest Class</a></li>
@@ -247,6 +249,7 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="">Logging Information</a></li>
 <li class="toctree-l2"><a class="reference internal" href="errors.html">Error Handling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="debugging.html">Debugging Your Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="caching.html">Web Page Caching</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cli.html">Running via the CLI</a></li>
 <li class="toctree-l2"><a class="reference internal" href="managing_apps.html">Managing your Applications</a></li>
 <li class="toctree-l2"><a class="reference internal" href="environments.html">Handling Multiple Environments</a></li>
@@ -258,6 +261,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../libraries/index.html">Library Reference</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../libraries/benchmark.html">Benchmarking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../libraries/caching.html">Caching Driver</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../libraries/cli.html">CLI Library</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../libraries/content_negotiation.html">Content Negotiation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../libraries/curlrequest.html">CURLRequest Class</a></li>
@@ -394,20 +398,12 @@ to the threshold value:</p>
 <h3>Using Multiple Log Handlers<a class="headerlink" href="#using-multiple-log-handlers" title="Permalink to this headline">¶</a></h3>
 <p>The logging system can support multiple methods of handling logging running at the same time. Each handler can
 be set to handle specific levels and ignore the rest. Currently, two handlers come with a default install:</p>
-<ul>
-<li><dl class="first docutils">
-<dt><strong>File Handler</strong> is the default handler and will create a single file for every day locally. This is the</dt>
-<dd><p class="first last">recommended method of logging.</p>
-</dd>
-</dl>
-</li>
-<li><dl class="first docutils">
-<dt><strong>ChromeLogger Handler</strong> If you have the <a class="reference external" href="https://craig.is/writing/chrome-logger">ChromeLogger extension</a></dt>
-<dd><p class="first last">installed in the Chrome web browser, you can use this handler to display the log information in
-Chrome&#8217;s console window.</p>
-</dd>
-</dl>
-</li>
+<ul class="simple">
+<li><strong>File Handler</strong> is the default handler and will create a single file for every day locally. This is the
+recommended method of logging.</li>
+<li><strong>ChromeLogger Handler</strong> If you have the <a class="reference external" href="https://craig.is/writing/chrome-logger">ChromeLogger extension</a>
+installed in the Chrome web browser, you can use this handler to display the log information in
+Chrome&#8217;s console window.</li>
 </ul>
 <p>The handlers are configured in the main configuration file, in the <tt class="docutils literal"><span class="pre">$handlers</span></tt> property, which is simply
 an array of handlers and their configuration. Each handler is specified with the key being the fully
@@ -533,7 +529,7 @@ still be able to log as it would expect, as long as it can find a PSR3 compatibl
   <div role="contentinfo">
     <p>
         &copy; Copyright 2014 - 2016, British Columbia Institute of Technology.
-       Last updated on Jun 26, 2016.
+       Last updated on Jul 14, 2016.
     </p>
   </div>
 
