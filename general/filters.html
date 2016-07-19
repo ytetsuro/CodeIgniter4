@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>General Topics &mdash; CodeIgniter4 4.0.0-dev documentation</title>
+  <title>Controller Filters &mdash; CodeIgniter4 4.0.0-dev documentation</title>
   
 
   
@@ -31,8 +31,9 @@
 
   
     <link rel="top" title="CodeIgniter4 4.0.0-dev documentation" href="../index.html"/>
-        <link rel="next" title="Helper Functions" href="helpers.html"/>
-        <link rel="prev" title="Security Guidelines" href="../concepts/security.html"/> 
+        <link rel="up" title="General Topics" href="index.html"/>
+        <link rel="next" title="Library Reference" href="../libraries/index.html"/>
+        <link rel="prev" title="Helper Functions" href="helpers.html"/> 
 
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
@@ -86,9 +87,9 @@
 </li>
 </ul>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="">General Topics</a><ul>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">General Topics</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="helpers.html">    Helpers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="filters.html">Controller Filters</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Controller Filters</a></li>
 </ul>
 </li>
 </ul>
@@ -219,9 +220,9 @@
 </li>
 </ul>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="">General Topics</a><ul>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">General Topics</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="helpers.html">    Helpers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="filters.html">Controller Filters</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Controller Filters</a></li>
 </ul>
 </li>
 </ul>
@@ -302,7 +303,9 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../index.html">Docs</a> &raquo;</li>
       
-    <li>General Topics</li>
+        <li><a href="index.html">General Topics</a> &raquo;</li>
+      
+    <li>Controller Filters</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -314,39 +317,171 @@
 </div>
           <div role="main" class="document">
             
-  <div class="section" id="general-topics">
-<h1>General Topics<a class="headerlink" href="#general-topics" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="helpers.html">    Helpers</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="helpers.html#loading-a-helper">Loading a Helper</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="helpers.html#loading-from-non-standard-locations">Loading from Non-standard Locations</a></li>
+  <div class="section" id="controller-filters">
+<h1>Controller Filters<a class="headerlink" href="#controller-filters" title="Permalink to this headline">¶</a></h1>
+<p>Controller Filters allow you to perform actions either before or after the controllers execute. Unlike <a class="reference internal" href="hooks.html"><em>hooks</em></a>,
+you can very simply choose which URI&#8217;s in your application have the filters applied to them. Incoming filters may
+modify the Request, while after filters can act on and even modify the Response, allowing for a lot of flexibility
+and power. Some common examples of tasks that might be performed with filters are:</p>
+<ul class="simple">
+<li>Performing CSRF protection on the incoming requests</li>
+<li>Restricting areas of your site based upon their Role.</li>
+<li>Perform rate limiting on certain endpoints</li>
+<li>Display a &#8220;Down for Maintenance&#8221; page</li>
+<li>Perform automatic content negotiation</li>
+<li>and more..</li>
 </ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="helpers.html#using-a-helper">Using a Helper</a></li>
-<li class="toctree-l2"><a class="reference internal" href="helpers.html#extending-helpers">&#8220;Extending&#8221; Helpers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="helpers.html#now-what">Now What?</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="filters.html">Controller Filters</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="filters.html#creating-a-filter">Creating a Filter</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="filters.html#before-filters">Before Filters</a></li>
-<li class="toctree-l3"><a class="reference internal" href="filters.html#after-filters">After Filters</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="filters.html#configuring-filters">Configuring Filters</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="filters.html#aliases">$aliases</a></li>
-<li class="toctree-l3"><a class="reference internal" href="filters.html#globals">$globals</a></li>
-<li class="toctree-l3"><a class="reference internal" href="filters.html#methods">$methods</a></li>
-<li class="toctree-l3"><a class="reference internal" href="filters.html#filters">$filters</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="filters.html#provided-filters">Provided Filters</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+<div class="section" id="creating-a-filter">
+<h2>Creating a Filter<a class="headerlink" href="#creating-a-filter" title="Permalink to this headline">¶</a></h2>
+<p>Filters are simple classes that implement <tt class="docutils literal"><span class="pre">CodeIgniter\Filters\FilterInterface</span></tt>. They contain two methods: <tt class="docutils literal"><span class="pre">before()</span></tt>
+and <tt class="docutils literal"><span class="pre">after()</span></tt>, which contain the code that will be ran before and after the controller, respectively. Your class
+must contain both methods, but may leave the methods empty if they are not needed. A skeleton filter class looks like:</p>
+<div class="highlight-ci"><div class="highlight"><pre><span class="o">&lt;?</span><span class="nx">php</span> <span class="k">namespace</span> <span class="nx">App\Filters</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">CodeIgniter\HTTP\RequestInterface</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">CodeIgniter\HTTP\ResponseInterface</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">CodeIgniter\Filters\FilterInterface</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">MyFilter</span> <span class="k">implements</span> <span class="nx">FilterInterface</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">before</span><span class="p">(</span><span class="nx">RequestInterface</span> <span class="nv">$request</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1">// Do something here</span>
+    <span class="p">}</span>
+
+    <span class="c1">//--------------------------------------------------------------------</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">after</span><span class="p">(</span><span class="nx">RequestInterface</span> <span class="nv">$request</span><span class="p">,</span> <span class="nx">ResponseInterface</span> <span class="nv">$response</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1">// Do something here</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="section" id="before-filters">
+<h3>Before Filters<a class="headerlink" href="#before-filters" title="Permalink to this headline">¶</a></h3>
+<p>From any filter, you can return the <tt class="docutils literal"><span class="pre">$request</span></tt> object and it will replace the current Request, allowing you
+to make changes that will still be present when the controller executes.</p>
+<p>Since before filters are executed prior to your controller being executed, you may at times want to stop the
+actions in the controller from happening. You can do this by passing back anything that is not the request object.
+This is typically used to peform redirects, like in this example:</p>
+<div class="highlight-ci"><div class="highlight"><pre><span class="k">public</span> <span class="k">function</span> <span class="nf">before</span><span class="p">(</span><span class="nx">RequestInterface</span> <span class="nv">$request</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nv">$auth</span> <span class="o">=</span> <span class="nx">service</span><span class="p">(</span><span class="s1">&#39;auth&#39;</span><span class="p">);</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span> <span class="nv">$auth</span><span class="o">-&gt;</span><span class="na">isLoggedIn</span><span class="p">())</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="nx">redirect</span><span class="p">(</span><span class="s1">&#39;login&#39;</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="after-filters">
+<h3>After Filters<a class="headerlink" href="#after-filters" title="Permalink to this headline">¶</a></h3>
+<p>After filters are nearly identical to before filters, except that you can only return the <tt class="docutils literal"><span class="pre">$response</span></tt> object,
+and you cannot stop script execution. This does allow you to modify the final output, or simply do something with
+the final output. This could be used to ensure certain security headers were set the correct way, or to cache
+the final output, or even to filter the final output with a bad words filter.</p>
+<div class="section" id="configuring-filters">
+<h4>Configuring Filters<a class="headerlink" href="#configuring-filters" title="Permalink to this headline">¶</a></h4>
+<p>Once you&#8217;ve created your filters, you need to configure when they get run. This is done in <tt class="docutils literal"><span class="pre">application/Config/Filters.php</span></tt>.
+This file contains four properties that allow you to configure exactly when the filters run.</p>
+</div>
+</div>
+<div class="section" id="aliases">
+<h3>$aliases<a class="headerlink" href="#aliases" title="Permalink to this headline">¶</a></h3>
+<p>The <tt class="docutils literal"><span class="pre">$aliases</span></tt> array is used to associate a simple name with one or more fully-qualified class names that are the
+filters to run:</p>
+<div class="highlight-ci"><div class="highlight"><pre><span class="k">public</span> <span class="nv">$aliases</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;csrf&#39;</span> <span class="o">=&gt;</span> <span class="nx">\App\Filters\CSRF</span><span class="o">::</span><span class="na">class</span>
+<span class="p">];</span>
+</pre></div>
+</div>
+<p>Aliases are mandatory and if you try to use a full class name later, the system will throw an error. Defining them
+in this way makes it simple to switch out the class used. Great for when you decided you need to change to a
+different authentication system since you only change the filter&#8217;s class and you&#8217;re done.</p>
+<p>You can combine multiple filters into one alias, making complex sets of filters simple to apply:</p>
+<div class="highlight-ci"><div class="highlight"><pre><span class="k">public</span> <span class="nv">$aliases</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;apiPrep&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>
+        <span class="nx">\App\Filters\Negotiate</span><span class="o">::</span><span class="na">class</span><span class="p">,</span>
+        <span class="nx">\App\Filters\ApiAuth</span><span class="o">::</span><span class="na">class</span>
+    <span class="p">]</span>
+<span class="p">];</span>
+</pre></div>
+</div>
+<p>You should define as many aliases as you need.</p>
+</div>
+<div class="section" id="globals">
+<h3>$globals<a class="headerlink" href="#globals" title="Permalink to this headline">¶</a></h3>
+<p>The second section allows you to define any filters that should be applied to every request made by the framework.
+You should take care with how many you use here, since it could have performance implications to have too many
+run on every request. Filters can be specified by adding their alias to either the before or after array:</p>
+<div class="highlight-ci"><div class="highlight"><pre><span class="k">public</span> <span class="nv">$globals</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="s1">&#39;before&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>
+                    <span class="s1">&#39;csrf&#39;</span>
+            <span class="p">],</span>
+            <span class="s1">&#39;after&#39;</span>  <span class="o">=&gt;</span> <span class="p">[]</span>
+    <span class="p">];</span>
+</pre></div>
+</div>
+<p>There are times where you want to apply a filter to almost every request, but have a few that should be left alone.
+One common example is if you need to exclude a few URI&#8217;s from the CSRF protection filter to allow requests from
+third-party websites to hit one or two specific URI&#8217;s, while keeping the rest of them protected. To do this, add
+an array with the &#8216;except&#8217; key and a uri to match as the value alongside the alias:</p>
+<div class="highlight-ci"><div class="highlight"><pre><span class="k">public</span> <span class="nv">$globals</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="s1">&#39;before&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>
+                    <span class="s1">&#39;csrf&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s1">&#39;except&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;api/*&#39;</span><span class="p">]</span>
+            <span class="p">],</span>
+            <span class="s1">&#39;after&#39;</span>  <span class="o">=&gt;</span> <span class="p">[]</span>
+    <span class="p">];</span>
+</pre></div>
+</div>
+<p>Any place you can use a URI in the filter settings, you can use a regular expression or, like in this example, use
+an asterisk for a wildcard that will match all characters after that. In this example, any URL&#8217;s starting with <tt class="docutils literal"><span class="pre">api/</span></tt>
+would be exempted from CSRF protection, but the site&#8217;s forms would all be protected. If you need to specify multiple
+URI&#8217;s you can use an array of URI patterns:</p>
+<div class="highlight-ci"><div class="highlight"><pre><span class="k">public</span> <span class="nv">$globals</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="s1">&#39;before&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>
+                    <span class="s1">&#39;csrf&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s1">&#39;except&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s1">&#39;foo/*&#39;</span><span class="p">,</span> <span class="s1">&#39;bar/*&#39;</span><span class="p">]]</span>
+            <span class="p">],</span>
+            <span class="s1">&#39;after&#39;</span>  <span class="o">=&gt;</span> <span class="p">[]</span>
+    <span class="p">];</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="methods">
+<h3>$methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h3>
+<p>You can apply filters to all requests of a certain HTTP method, like POST, GET, PUT, etc. In this array, you would
+specify the method name in lowercase. It&#8217;s value would be an array of filters to run. Unlike the <tt class="docutils literal"><span class="pre">$globals</span></tt> or the
+<tt class="docutils literal"><span class="pre">$filters</span></tt> properties, these will only run as before filters.</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>public $methods = [</dt>
+<dd>&#8216;post&#8217; =&gt; [&#8216;foo&#8217;, &#8216;bar&#8217;],
+&#8216;get&#8217;  =&gt; [&#8216;baz&#8217;]</dd>
+</dl>
+<p>]</p>
+</div></blockquote>
+<p>In addition to the standard HTTP methods, this also supports two special cases: &#8216;cli&#8217;, and &#8216;ajax&#8217;. The names are
+self-explanatory here, but &#8216;cli&#8217; would apply to all requests that were run from the command line, while &#8216;ajax&#8217;
+would apply to every AJAX request.</p>
+</div>
+<div class="section" id="filters">
+<h3>$filters<a class="headerlink" href="#filters" title="Permalink to this headline">¶</a></h3>
+<p>This property is an array of filter aliases. For each alias you can specify before and after arrays that contain
+a list of URI patterns that filter should apply to:</p>
+<div class="highlight-ci"><div class="highlight"><pre><span class="k">public</span> <span class="nx">filters</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;foo&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s1">&#39;before&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s1">&#39;admin/*&#39;</span><span class="p">],</span> <span class="s1">&#39;after&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s1">&#39;users/*&#39;</span><span class="p">]],</span>
+    <span class="s1">&#39;bar&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s1">&#39;before&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s1">&#39;api/*&#39;</span><span class="p">,</span> <span class="s1">&#39;admin/*&#39;</span><span class="p">]]</span>
+<span class="p">];</span>
+</pre></div>
+</div>
+<div class="section" id="provided-filters">
+<h4>Provided Filters<a class="headerlink" href="#provided-filters" title="Permalink to this headline">¶</a></h4>
+<p>To be determined.</p>
+</div>
+</div>
 </div>
 </div>
 
@@ -356,10 +491,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="helpers.html" class="btn btn-neutral float-right" title="Helper Functions">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../libraries/index.html" class="btn btn-neutral float-right" title="Library Reference">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../concepts/security.html" class="btn btn-neutral" title="Security Guidelines"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="helpers.html" class="btn btn-neutral" title="Helper Functions"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
