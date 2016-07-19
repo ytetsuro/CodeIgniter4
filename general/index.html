@@ -31,7 +31,7 @@
 
   
     <link rel="top" title="CodeIgniter4 4.0.0-dev documentation" href="../index.html"/>
-        <link rel="next" title="Helper Functions" href="helpers.html"/>
+        <link rel="next" title="Working With Configuration Files" href="configuration.html"/>
         <link rel="prev" title="Security Guidelines" href="../concepts/security.html"/> 
 
   
@@ -87,8 +87,25 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="">General Topics</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="helpers.html">    Helpers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuration.html">Working With Configuration Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="urls.html">CodeIgniter URLs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controllers.html">Controllers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="views.html">Views</a></li>
+<li class="toctree-l2"><a class="reference internal" href="helpers.html">Helpers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="core_classes.html">Creating Core System Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hooks.html">Hooks - Extending the Framework Core</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common_functions.html">Global Functions and Constants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="routing.html">URI Routing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="filters.html">Controller Filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logging.html">Logging Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="errors.html">Error Handling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="debugging.html">Debugging Your Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="caching.html">Web Page Caching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cli.html">Running via the CLI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="managing_apps.html">Managing your Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="environments.html">Handling Multiple Environments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="alternative_php.html">Alternate PHP Syntax for View Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html">Testing</a></li>
 </ul>
 </li>
 </ul>
@@ -220,8 +237,25 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="">General Topics</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="helpers.html">    Helpers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuration.html">Working With Configuration Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="urls.html">CodeIgniter URLs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controllers.html">Controllers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="views.html">Views</a></li>
+<li class="toctree-l2"><a class="reference internal" href="helpers.html">Helpers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="core_classes.html">Creating Core System Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hooks.html">Hooks - Extending the Framework Core</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common_functions.html">Global Functions and Constants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="routing.html">URI Routing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="filters.html">Controller Filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logging.html">Logging Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="errors.html">Error Handling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="debugging.html">Debugging Your Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="caching.html">Web Page Caching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cli.html">Running via the CLI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="managing_apps.html">Managing your Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="environments.html">Handling Multiple Environments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="alternative_php.html">Alternate PHP Syntax for View Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html">Testing</a></li>
 </ul>
 </li>
 </ul>
@@ -318,32 +352,61 @@
 <h1>General Topics<a class="headerlink" href="#general-topics" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="helpers.html">    Helpers</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="helpers.html#loading-a-helper">Loading a Helper</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="helpers.html#loading-from-non-standard-locations">Loading from Non-standard Locations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuration.html">Working With Configuration Files</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="helpers.html#using-a-helper">Using a Helper</a></li>
-<li class="toctree-l2"><a class="reference internal" href="helpers.html#extending-helpers">&#8220;Extending&#8221; Helpers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="helpers.html#now-what">Now What?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="urls.html">CodeIgniter URLs</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="filters.html">Controller Filters</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="filters.html#creating-a-filter">Creating a Filter</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="filters.html#before-filters">Before Filters</a></li>
-<li class="toctree-l3"><a class="reference internal" href="filters.html#after-filters">After Filters</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="filters.html#configuring-filters">Configuring Filters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="controllers.html">Controllers</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="filters.html#aliases">$aliases</a></li>
-<li class="toctree-l3"><a class="reference internal" href="filters.html#globals">$globals</a></li>
-<li class="toctree-l3"><a class="reference internal" href="filters.html#methods">$methods</a></li>
-<li class="toctree-l3"><a class="reference internal" href="filters.html#filters">$filters</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="filters.html#provided-filters">Provided Filters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="views.html">Views</a><ul class="simple">
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="helpers.html">Helpers</a><ul class="simple">
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="core_classes.html">Creating Core System Classes</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="hooks.html">Hooks - Extending the Framework Core</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="common_functions.html">Global Functions and Constants</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="routing.html">URI Routing</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="filters.html">Controller Filters</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="logging.html">Logging Information</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="errors.html">Error Handling</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="debugging.html">Debugging Your Application</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="caching.html">Web Page Caching</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cli.html">Running via the CLI</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="managing_apps.html">Managing your Applications</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="environments.html">Handling Multiple Environments</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="alternative_php.html">Alternate PHP Syntax for View Files</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="testing.html">Testing</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -356,7 +419,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="helpers.html" class="btn btn-neutral float-right" title="Helper Functions">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="configuration.html" class="btn btn-neutral float-right" title="Working With Configuration Files">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../concepts/security.html" class="btn btn-neutral" title="Security Guidelines"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -369,7 +432,7 @@
   <div role="contentinfo">
     <p>
         &copy; Copyright 2014 - 2016, British Columbia Institute of Technology.
-       Last updated on Jul 18, 2016.
+       Last updated on Jul 19, 2016.
     </p>
   </div>
 

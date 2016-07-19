@@ -32,8 +32,8 @@
   
     <link rel="top" title="CodeIgniter4 4.0.0-dev documentation" href="../index.html"/>
         <link rel="up" title="General Topics" href="index.html"/>
-        <link rel="next" title="Library Reference" href="../libraries/index.html"/>
-        <link rel="prev" title="Helper Functions" href="helpers.html"/> 
+        <link rel="next" title="Logging Information" href="logging.html"/>
+        <link rel="prev" title="URI Routing" href="routing.html"/> 
 
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
@@ -88,8 +88,25 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">General Topics</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="helpers.html">    Helpers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuration.html">Working With Configuration Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="urls.html">CodeIgniter URLs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controllers.html">Controllers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="views.html">Views</a></li>
+<li class="toctree-l2"><a class="reference internal" href="helpers.html">Helpers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="core_classes.html">Creating Core System Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hooks.html">Hooks - Extending the Framework Core</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common_functions.html">Global Functions and Constants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="routing.html">URI Routing</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="">Controller Filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logging.html">Logging Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="errors.html">Error Handling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="debugging.html">Debugging Your Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="caching.html">Web Page Caching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cli.html">Running via the CLI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="managing_apps.html">Managing your Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="environments.html">Handling Multiple Environments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="alternative_php.html">Alternate PHP Syntax for View Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html">Testing</a></li>
 </ul>
 </li>
 </ul>
@@ -221,8 +238,25 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">General Topics</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="helpers.html">    Helpers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuration.html">Working With Configuration Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="urls.html">CodeIgniter URLs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controllers.html">Controllers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="views.html">Views</a></li>
+<li class="toctree-l2"><a class="reference internal" href="helpers.html">Helpers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="core_classes.html">Creating Core System Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hooks.html">Hooks - Extending the Framework Core</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common_functions.html">Global Functions and Constants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="routing.html">URI Routing</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="">Controller Filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logging.html">Logging Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="errors.html">Error Handling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="debugging.html">Debugging Your Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="caching.html">Web Page Caching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cli.html">Running via the CLI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="managing_apps.html">Managing your Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="environments.html">Handling Multiple Environments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="alternative_php.html">Alternate PHP Syntax for View Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html">Testing</a></li>
 </ul>
 </li>
 </ul>
@@ -454,15 +488,13 @@ URI&#8217;s you can use an array of URI patterns:</p>
 <h3>$methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h3>
 <p>You can apply filters to all requests of a certain HTTP method, like POST, GET, PUT, etc. In this array, you would
 specify the method name in lowercase. It&#8217;s value would be an array of filters to run. Unlike the <tt class="docutils literal"><span class="pre">$globals</span></tt> or the
-<tt class="docutils literal"><span class="pre">$filters</span></tt> properties, these will only run as before filters.</p>
-<blockquote>
-<div><dl class="docutils">
-<dt>public $methods = [</dt>
-<dd>&#8216;post&#8217; =&gt; [&#8216;foo&#8217;, &#8216;bar&#8217;],
-&#8216;get&#8217;  =&gt; [&#8216;baz&#8217;]</dd>
-</dl>
-<p>]</p>
-</div></blockquote>
+<tt class="docutils literal"><span class="pre">$filters</span></tt> properties, these will only run as before filters:</p>
+<div class="highlight-ci"><div class="highlight"><pre><span class="k">public</span> <span class="nv">$methods</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;post&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="s1">&#39;bar&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;get&#39;</span>  <span class="o">=&gt;</span> <span class="p">[</span><span class="s1">&#39;baz&#39;</span><span class="p">]</span>
+<span class="p">]</span>
+</pre></div>
+</div>
 <p>In addition to the standard HTTP methods, this also supports two special cases: &#8216;cli&#8217;, and &#8216;ajax&#8217;. The names are
 self-explanatory here, but &#8216;cli&#8217; would apply to all requests that were run from the command line, while &#8216;ajax&#8217;
 would apply to every AJAX request.</p>
@@ -491,10 +523,10 @@ a list of URI patterns that filter should apply to:</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../libraries/index.html" class="btn btn-neutral float-right" title="Library Reference">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="logging.html" class="btn btn-neutral float-right" title="Logging Information">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="helpers.html" class="btn btn-neutral" title="Helper Functions"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="routing.html" class="btn btn-neutral" title="URI Routing"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -504,7 +536,7 @@ a list of URI patterns that filter should apply to:</p>
   <div role="contentinfo">
     <p>
         &copy; Copyright 2014 - 2016, British Columbia Institute of Technology.
-       Last updated on Jul 18, 2016.
+       Last updated on Jul 19, 2016.
     </p>
   </div>
 
