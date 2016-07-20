@@ -149,7 +149,10 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../helpers/index.html">Helpers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../helpers/index.html">Helpers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../helpers/url_helper.html">URL Helper</a></li>
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../contributing/index.html">Contributing to CodeIgniter</a><ul>
@@ -299,7 +302,10 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../helpers/index.html">Helpers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../helpers/index.html">Helpers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../helpers/url_helper.html">URL Helper</a></li>
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../contributing/index.html">Contributing to CodeIgniter</a><ul>
@@ -375,8 +381,8 @@ not read the <a class="reference internal" href="controllers.html"><em>Controlle
 </div>
 <p>Then save the file in your <strong>application/Views</strong> directory.</p>
 </div>
-<div class="section" id="loading-a-view">
-<h2>Loading a View<a class="headerlink" href="#loading-a-view" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="displaying-a-view">
+<h2>Displaying a View<a class="headerlink" href="#displaying-a-view" title="Permalink to this headline">¶</a></h2>
 <p>To load a particular view file you will use the following function:</p>
 <div class="highlight-ci"><div class="highlight"><pre><span class="nx">view</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">);</span>
 </pre></div>
@@ -399,6 +405,11 @@ not read the <a class="reference internal" href="controllers.html"><em>Controlle
 <p>If you visit your site using the URL you did earlier you should see your new view. The URL was similar to this:</p>
 <div class="highlight-ci"><div class="highlight"><pre><span class="nx">example</span><span class="o">.</span><span class="nx">com</span><span class="o">/</span><span class="nx">index</span><span class="o">.</span><span class="nx">php</span><span class="o">/</span><span class="nx">blog</span><span class="o">/</span>
 </pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">While all of the examples show echo the view directly, you can also return the output from the view, instead,
+and it will be appended to any captured output.</p>
 </div>
 </div>
 <div class="section" id="loading-multiple-views">
@@ -717,7 +728,7 @@ as the fourth parameter.:</p>
   <div role="contentinfo">
     <p>
         &copy; Copyright 2014 - 2016, British Columbia Institute of Technology.
-       Last updated on Jul 19, 2016.
+       Last updated on Jul 20, 2016.
     </p>
   </div>
 

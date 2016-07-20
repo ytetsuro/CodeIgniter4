@@ -147,7 +147,10 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="helpers/index.html">Helpers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="helpers/index.html">Helpers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="helpers/url_helper.html">URL Helper</a></li>
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="contributing/index.html">Contributing to CodeIgniter</a><ul>
@@ -297,7 +300,10 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="helpers/index.html">Helpers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="helpers/index.html">Helpers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="helpers/url_helper.html">URL Helper</a></li>
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="contributing/index.html">Contributing to CodeIgniter</a><ul>
@@ -366,6 +372,7 @@
  | <a href="#M"><strong>M</strong></a>
  | <a href="#N"><strong>N</strong></a>
  | <a href="#O"><strong>O</strong></a>
+ | <a href="#P"><strong>P</strong></a>
  | <a href="#R"><strong>R</strong></a>
  | <a href="#S"><strong>S</strong></a>
  | <a href="#T"><strong>T</strong></a>
@@ -379,7 +386,7 @@
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%" valign="top"><dl>
       
-  <dt><a href="libraries/incomingrequest.html#isCLI"><strong>() ( method)</strong></a>, <a href="libraries/incomingrequest.html#isAJAX"><strong>[1]</strong></a>, <a href="libraries/incomingrequest.html#isSecure"><strong>[2]</strong></a>, <a href="libraries/incomingrequest.html#getGet"><strong>[3]</strong></a>, <a href="libraries/incomingrequest.html#getPost"><strong>[4]</strong></a>, <a href="libraries/incomingrequest.html#getPostGet"><strong>[5]</strong></a>, <a href="libraries/incomingrequest.html#getGetPost"><strong>[6]</strong></a>, <a href="libraries/incomingrequest.html#getCookie"><strong>[7]</strong></a>, <a href="libraries/incomingrequest.html#getServer"><strong>[8]</strong></a>, <a href="libraries/incomingrequest.html#getUserAgent"><strong>[9]</strong></a>, <a href="libraries/request.html#ipAddress"><strong>[10]</strong></a>, <a href="libraries/request.html#validIP"><strong>[11]</strong></a>, <a href="libraries/request.html#method"><strong>[12]</strong></a>, <a href="libraries/request.html#getServer"><strong>[13]</strong></a>, <a href="libraries/caching.html#isSupported"><strong>[14]</strong></a>, <a href="libraries/caching.html#get"><strong>[15]</strong></a>, <a href="libraries/caching.html#save"><strong>[16]</strong></a>, <a href="libraries/caching.html#delete"><strong>[17]</strong></a>, <a href="libraries/caching.html#increment"><strong>[18]</strong></a>, <a href="libraries/caching.html#decrement"><strong>[19]</strong></a>, <a href="libraries/caching.html#clean"><strong>[20]</strong></a>, <a href="libraries/caching.html#cache_info"><strong>[21]</strong></a>, <a href="libraries/caching.html#getMetadata"><strong>[22]</strong></a>, <a href="test/cli.html#init"><strong>[23]</strong></a>, <a href="test/cli.html#input"><strong>[24]</strong></a>, <a href="test/cli.html#prompt"><strong>[25]</strong></a>, <a href="test/cli.html#write"><strong>[26]</strong></a>, <a href="test/cli.html#error"><strong>[27]</strong></a>, <a href="test/cli.html#beep"><strong>[28]</strong></a>, <a href="test/cli.html#wait"><strong>[29]</strong></a>, <a href="test/cli.html#isWindows"><strong>[30]</strong></a>, <a href="test/cli.html#newLine"><strong>[31]</strong></a>, <a href="test/cli.html#clearScreen"><strong>[32]</strong></a>, <a href="test/cli.html#color"><strong>[33]</strong></a>, <a href="test/cli.html#getWidth"><strong>[34]</strong></a>, <a href="test/cli.html#getHeight"><strong>[35]</strong></a>, <a href="test/cli.html#showProgress"><strong>[36]</strong></a>, <a href="test/cli.html#wrap"><strong>[37]</strong></a>, <a href="libraries/response.html#statusCode"><strong>[38]</strong></a>, <a href="libraries/response.html#setStatusCode"><strong>[39]</strong></a>, <a href="libraries/response.html#reason"><strong>[40]</strong></a>, <a href="libraries/response.html#setDate"><strong>[41]</strong></a>, <a href="libraries/response.html#setContentType"><strong>[42]</strong></a>, <a href="libraries/response.html#noCache"><strong>[43]</strong></a>, <a href="libraries/response.html#setCache"><strong>[44]</strong></a>, <a href="libraries/response.html#setLastModified"><strong>[45]</strong></a>, <a href="libraries/response.html#send"><strong>[46]</strong></a>, <a href="libraries/response.html#setCookie"><strong>[47]</strong></a>, <a href="test/incoming_request.html#__construct"><strong>[48]</strong></a>, <a href="test/incoming_request.html#isCLI"><strong>[49]</strong></a>, <a href="test/incoming_request.html#isAJAX"><strong>[50]</strong></a>, <a href="test/incoming_request.html#getGet"><strong>[51]</strong></a>, <a href="test/incoming_request.html#getPost"><strong>[52]</strong></a>, <a href="test/incoming_request.html#getPostGet"><strong>[53]</strong></a>, <a href="test/incoming_request.html#getGetPost"><strong>[54]</strong></a>, <a href="test/incoming_request.html#getCookie"><strong>[55]</strong></a>, <a href="test/incoming_request.html#getUserAgent"><strong>[56]</strong></a>, <a href="test/incoming_request.html#setCookie"><strong>[57]</strong></a>, <a href="test/incoming_request.html#isSecure"><strong>[58]</strong></a>, <a href="test/incoming_request.html#getFiles"><strong>[59]</strong></a>, <a href="test/incoming_request.html#getFile"><strong>[60]</strong></a>, <a href="test/incoming_request.html#detectPath"><strong>[61]</strong></a>, <a href="test/incoming_request.html#negotiate"><strong>[62]</strong></a>, <a href="test/incoming_request.html#getIPAddress"><strong>[63]</strong></a>, <a href="test/incoming_request.html#isValidIP"><strong>[64]</strong></a>, <a href="test/incoming_request.html#getMethod"><strong>[65]</strong></a>, <a href="test/incoming_request.html#getServer"><strong>[66]</strong></a>, <a href="test/incoming_request.html#getEnv"><strong>[67]</strong></a>, <a href="test/incoming_request.html#getBody"><strong>[68]</strong></a>, <a href="test/incoming_request.html#setBody"><strong>[69]</strong></a>, <a href="test/incoming_request.html#populateHeaders"><strong>[70]</strong></a>, <a href="test/incoming_request.html#getHeaders"><strong>[71]</strong></a>, <a href="test/incoming_request.html#getHeader"><strong>[72]</strong></a>, <a href="test/incoming_request.html#hasHeader"><strong>[73]</strong></a>, <a href="test/incoming_request.html#getHeaderLine"><strong>[74]</strong></a>, <a href="test/incoming_request.html#setHeader"><strong>[75]</strong></a>, <a href="test/incoming_request.html#removeHeader"><strong>[76]</strong></a>, <a href="test/incoming_request.html#appendHeader"><strong>[77]</strong></a>, <a href="test/incoming_request.html#prependHeader"><strong>[78]</strong></a>, <a href="test/incoming_request.html#getProtocolVersion"><strong>[79]</strong></a>, <a href="test/incoming_request.html#setProtocolVersion"><strong>[80]</strong></a>, <a href="libraries/message.html#body"><strong>[81]</strong></a>, <a href="libraries/message.html#setBody"><strong>[82]</strong></a>, <a href="libraries/message.html#populateHeaders"><strong>[83]</strong></a>, <a href="libraries/message.html#headers"><strong>[84]</strong></a>, <a href="libraries/message.html#header"><strong>[85]</strong></a>, <a href="libraries/message.html#headerLine"><strong>[86]</strong></a>, <a href="libraries/message.html#setHeader"><strong>[87]</strong></a>, <a href="libraries/message.html#removeHeader"><strong>[88]</strong></a>, <a href="libraries/message.html#appendHeader"><strong>[89]</strong></a>, <a href="libraries/message.html#protocolVersion"><strong>[90]</strong></a>, <a href="libraries/message.html#setProtocolVersion"><strong>[91]</strong></a>, <a href="libraries/message.html#negotiateMedia"><strong>[92]</strong></a>, <a href="libraries/message.html#negotiateCharset"><strong>[93]</strong></a>, <a href="libraries/message.html#negotiateEncoding"><strong>[94]</strong></a>, <a href="libraries/message.html#negotiateLanguage"><strong>[95]</strong></a>
+  <dt><a href="libraries/message.html#body"><strong>() ( method)</strong></a>, <a href="libraries/message.html#setBody"><strong>[1]</strong></a>, <a href="libraries/message.html#populateHeaders"><strong>[2]</strong></a>, <a href="libraries/message.html#headers"><strong>[3]</strong></a>, <a href="libraries/message.html#header"><strong>[4]</strong></a>, <a href="libraries/message.html#headerLine"><strong>[5]</strong></a>, <a href="libraries/message.html#setHeader"><strong>[6]</strong></a>, <a href="libraries/message.html#removeHeader"><strong>[7]</strong></a>, <a href="libraries/message.html#appendHeader"><strong>[8]</strong></a>, <a href="libraries/message.html#protocolVersion"><strong>[9]</strong></a>, <a href="libraries/message.html#setProtocolVersion"><strong>[10]</strong></a>, <a href="libraries/message.html#negotiateMedia"><strong>[11]</strong></a>, <a href="libraries/message.html#negotiateCharset"><strong>[12]</strong></a>, <a href="libraries/message.html#negotiateEncoding"><strong>[13]</strong></a>, <a href="libraries/message.html#negotiateLanguage"><strong>[14]</strong></a>, <a href="test/incoming_request.html#__construct"><strong>[15]</strong></a>, <a href="test/incoming_request.html#isCLI"><strong>[16]</strong></a>, <a href="test/incoming_request.html#isAJAX"><strong>[17]</strong></a>, <a href="test/incoming_request.html#getGet"><strong>[18]</strong></a>, <a href="test/incoming_request.html#getPost"><strong>[19]</strong></a>, <a href="test/incoming_request.html#getPostGet"><strong>[20]</strong></a>, <a href="test/incoming_request.html#getGetPost"><strong>[21]</strong></a>, <a href="test/incoming_request.html#getCookie"><strong>[22]</strong></a>, <a href="test/incoming_request.html#getUserAgent"><strong>[23]</strong></a>, <a href="test/incoming_request.html#setCookie"><strong>[24]</strong></a>, <a href="test/incoming_request.html#isSecure"><strong>[25]</strong></a>, <a href="test/incoming_request.html#getFiles"><strong>[26]</strong></a>, <a href="test/incoming_request.html#getFile"><strong>[27]</strong></a>, <a href="test/incoming_request.html#detectPath"><strong>[28]</strong></a>, <a href="test/incoming_request.html#negotiate"><strong>[29]</strong></a>, <a href="test/incoming_request.html#getIPAddress"><strong>[30]</strong></a>, <a href="test/incoming_request.html#isValidIP"><strong>[31]</strong></a>, <a href="test/incoming_request.html#getMethod"><strong>[32]</strong></a>, <a href="test/incoming_request.html#getServer"><strong>[33]</strong></a>, <a href="test/incoming_request.html#getEnv"><strong>[34]</strong></a>, <a href="test/incoming_request.html#getBody"><strong>[35]</strong></a>, <a href="test/incoming_request.html#setBody"><strong>[36]</strong></a>, <a href="test/incoming_request.html#populateHeaders"><strong>[37]</strong></a>, <a href="test/incoming_request.html#getHeaders"><strong>[38]</strong></a>, <a href="test/incoming_request.html#getHeader"><strong>[39]</strong></a>, <a href="test/incoming_request.html#hasHeader"><strong>[40]</strong></a>, <a href="test/incoming_request.html#getHeaderLine"><strong>[41]</strong></a>, <a href="test/incoming_request.html#setHeader"><strong>[42]</strong></a>, <a href="test/incoming_request.html#removeHeader"><strong>[43]</strong></a>, <a href="test/incoming_request.html#appendHeader"><strong>[44]</strong></a>, <a href="test/incoming_request.html#prependHeader"><strong>[45]</strong></a>, <a href="test/incoming_request.html#getProtocolVersion"><strong>[46]</strong></a>, <a href="test/incoming_request.html#setProtocolVersion"><strong>[47]</strong></a>, <a href="libraries/caching.html#isSupported"><strong>[48]</strong></a>, <a href="libraries/caching.html#get"><strong>[49]</strong></a>, <a href="libraries/caching.html#save"><strong>[50]</strong></a>, <a href="libraries/caching.html#delete"><strong>[51]</strong></a>, <a href="libraries/caching.html#increment"><strong>[52]</strong></a>, <a href="libraries/caching.html#decrement"><strong>[53]</strong></a>, <a href="libraries/caching.html#clean"><strong>[54]</strong></a>, <a href="libraries/caching.html#cache_info"><strong>[55]</strong></a>, <a href="libraries/caching.html#getMetadata"><strong>[56]</strong></a>, <a href="test/cli.html#init"><strong>[57]</strong></a>, <a href="test/cli.html#input"><strong>[58]</strong></a>, <a href="test/cli.html#prompt"><strong>[59]</strong></a>, <a href="test/cli.html#write"><strong>[60]</strong></a>, <a href="test/cli.html#error"><strong>[61]</strong></a>, <a href="test/cli.html#beep"><strong>[62]</strong></a>, <a href="test/cli.html#wait"><strong>[63]</strong></a>, <a href="test/cli.html#isWindows"><strong>[64]</strong></a>, <a href="test/cli.html#newLine"><strong>[65]</strong></a>, <a href="test/cli.html#clearScreen"><strong>[66]</strong></a>, <a href="test/cli.html#color"><strong>[67]</strong></a>, <a href="test/cli.html#getWidth"><strong>[68]</strong></a>, <a href="test/cli.html#getHeight"><strong>[69]</strong></a>, <a href="test/cli.html#showProgress"><strong>[70]</strong></a>, <a href="test/cli.html#wrap"><strong>[71]</strong></a>, <a href="libraries/response.html#statusCode"><strong>[72]</strong></a>, <a href="libraries/response.html#setStatusCode"><strong>[73]</strong></a>, <a href="libraries/response.html#reason"><strong>[74]</strong></a>, <a href="libraries/response.html#setDate"><strong>[75]</strong></a>, <a href="libraries/response.html#setContentType"><strong>[76]</strong></a>, <a href="libraries/response.html#noCache"><strong>[77]</strong></a>, <a href="libraries/response.html#setCache"><strong>[78]</strong></a>, <a href="libraries/response.html#setLastModified"><strong>[79]</strong></a>, <a href="libraries/response.html#send"><strong>[80]</strong></a>, <a href="libraries/response.html#setCookie"><strong>[81]</strong></a>, <a href="libraries/incomingrequest.html#isCLI"><strong>[82]</strong></a>, <a href="libraries/incomingrequest.html#isAJAX"><strong>[83]</strong></a>, <a href="libraries/incomingrequest.html#isSecure"><strong>[84]</strong></a>, <a href="libraries/incomingrequest.html#getGet"><strong>[85]</strong></a>, <a href="libraries/incomingrequest.html#getPost"><strong>[86]</strong></a>, <a href="libraries/incomingrequest.html#getPostGet"><strong>[87]</strong></a>, <a href="libraries/incomingrequest.html#getGetPost"><strong>[88]</strong></a>, <a href="libraries/incomingrequest.html#getCookie"><strong>[89]</strong></a>, <a href="libraries/incomingrequest.html#getServer"><strong>[90]</strong></a>, <a href="libraries/incomingrequest.html#getUserAgent"><strong>[91]</strong></a>, <a href="libraries/request.html#ipAddress"><strong>[92]</strong></a>, <a href="libraries/request.html#validIP"><strong>[93]</strong></a>, <a href="libraries/request.html#method"><strong>[94]</strong></a>, <a href="libraries/request.html#getServer"><strong>[95]</strong></a>
   </dt>
 
   </dl></td>
@@ -396,14 +403,26 @@
   <dt><a href="database/forge.html#CodeIgniterDatabaseForge::addField"><strong>addField() (CodeIgniterDatabaseForge method)</strong></a>
   </dt>
 
-  </dl></td>
-  <td style="width: 33%" valign="top"><dl>
       
   <dt><a href="database/forge.html#CodeIgniterDatabaseForge::addKey"><strong>addKey() (CodeIgniterDatabaseForge method)</strong></a>
   </dt>
 
       
+  <dt><a href="helpers/url_helper.html#anchor"><strong>anchor() (global function)</strong></a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="helpers/url_helper.html#anchor_popup"><strong>anchor_popup() (global function)</strong></a>
+  </dt>
+
+      
   <dt><a href="general/common_functions.html#APPPATH"><strong>APPPATH (global constant)</strong></a>
+  </dt>
+
+      
+  <dt><a href="helpers/url_helper.html#auto_link"><strong>auto_link() (global function)</strong></a>
   </dt>
 
   </dl></td>
@@ -411,6 +430,12 @@
 
 <h2 id="B">B</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="helpers/url_helper.html#base_url"><strong>base_url() (global function)</strong></a>
+  </dt>
+
+  </dl></td>
   <td style="width: 33%" valign="top"><dl>
       
   <dt><a href="general/common_functions.html#BASEPATH"><strong>BASEPATH (global constant)</strong></a>
@@ -466,6 +491,10 @@
 
       
   <dt><a href="database/migration.html#CodeIgniterDatabaseMigrationRunner::current"><strong>current() (CodeIgniterDatabaseMigrationRunner method)</strong></a>
+  </dt>
+
+      
+  <dt><a href="helpers/url_helper.html#current_url"><strong>current_url() (global function)</strong></a>
   </dt>
 
   </dl></td>
@@ -691,6 +720,10 @@
   </dt>
 
       
+  <dt><a href="helpers/url_helper.html#index_page"><strong>index_page() (global function)</strong></a>
+  </dt>
+
+      
   <dt><a href="database/query_builder.html#CodeIgniterDatabaseBaseBuilder::insert"><strong>insert() (CodeIgniterDatabaseBaseBuilder method)</strong></a>
   </dt>
 
@@ -745,15 +778,19 @@
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%" valign="top"><dl>
       
-  <dt><a href="general/common_functions.html#MINUTE"><strong>MINUTE (global constant)</strong></a>
+  <dt><a href="helpers/url_helper.html#mailto"><strong>mailto() (global function)</strong></a>
   </dt>
 
       
-  <dt><a href="database/forge.html#CodeIgniterDatabaseForge::modifyColumn"><strong>modifyColumn() (CodeIgniterDatabaseForge method)</strong></a>
+  <dt><a href="general/common_functions.html#MINUTE"><strong>MINUTE (global constant)</strong></a>
   </dt>
 
   </dl></td>
   <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="database/forge.html#CodeIgniterDatabaseForge::modifyColumn"><strong>modifyColumn() (CodeIgniterDatabaseForge method)</strong></a>
+  </dt>
+
       
   <dt><a href="general/common_functions.html#MONTH"><strong>MONTH (global constant)</strong></a>
   </dt>
@@ -825,6 +862,16 @@
   </dl></td>
 </tr></table>
 
+<h2 id="P">P</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="helpers/url_helper.html#prep_url"><strong>prep_url() (global function)</strong></a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
 <h2 id="R">R</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%" valign="top"><dl>
@@ -860,6 +907,10 @@
 <h2 id="S">S</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="helpers/url_helper.html#safe_mailto"><strong>safe_mailto() (global function)</strong></a>
+  </dt>
+
       
   <dt><a href="general/common_functions.html#SECOND"><strong>SECOND (global constant)</strong></a>
   </dt>
@@ -923,6 +974,10 @@
   </dt>
 
       
+  <dt><a href="helpers/url_helper.html#site_url"><strong>site_url() (global function)</strong></a>
+  </dt>
+
+      
   <dt><a href="general/common_functions.html#stringify_attributes"><strong>stringify_attributes() (global function)</strong></a>
   </dt>
 
@@ -952,10 +1007,18 @@
   <dt><a href="database/query_builder.html#CodeIgniterDatabaseBaseBuilder::update"><strong>update() (CodeIgniterDatabaseBaseBuilder method)</strong></a>
   </dt>
 
+      
+  <dt><a href="database/query_builder.html#CodeIgniterDatabaseBaseBuilder::updateBatch"><strong>updateBatch() (CodeIgniterDatabaseBaseBuilder method)</strong></a>
+  </dt>
+
   </dl></td>
   <td style="width: 33%" valign="top"><dl>
       
-  <dt><a href="database/query_builder.html#CodeIgniterDatabaseBaseBuilder::updateBatch"><strong>updateBatch() (CodeIgniterDatabaseBaseBuilder method)</strong></a>
+  <dt><a href="helpers/url_helper.html#uri_string"><strong>uri_string() (global function)</strong></a>
+  </dt>
+
+      
+  <dt><a href="helpers/url_helper.html#url_title"><strong>url_title() (global function)</strong></a>
   </dt>
 
   </dl></td>
@@ -1026,7 +1089,7 @@
   <div role="contentinfo">
     <p>
         &copy; Copyright 2014 - 2016, British Columbia Institute of Technology.
-       Last updated on Jul 19, 2016.
+       Last updated on Jul 20, 2016.
     </p>
   </div>
 

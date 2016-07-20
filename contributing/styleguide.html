@@ -149,7 +149,10 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../helpers/index.html">Helpers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../helpers/index.html">Helpers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../helpers/url_helper.html">URL Helper</a></li>
+</ul>
+</li>
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Contributing to CodeIgniter</a><ul class="current">
@@ -299,7 +302,10 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../helpers/index.html">Helpers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../helpers/index.html">Helpers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../helpers/url_helper.html">URL Helper</a></li>
+</ul>
+</li>
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Contributing to CodeIgniter</a><ul class="current">
@@ -420,8 +426,8 @@ or execute non-declarative logic, but SHOULD NOT do both.</p>
 <ul class="simple">
 <li>File names MUST end with a &#8221;.php&#8221; name extension and MUST NOT have
 multiple name extensions.</li>
-<li>Files declaring classes MUST have names exactly matching the classes
-that they declare (obviously excluding the &#8221;.php&#8221; name extension).</li>
+<li>Files declaring classes, interfaces or traits MUST have names exactly matching
+the classes that they declare (obviously excluding the &#8221;.php&#8221; name extension).</li>
 <li>Files declaring functions SHOULD be named in <em>snake_case.php</em>.</li>
 </ul>
 </div>
@@ -429,10 +435,14 @@ that they declare (obviously excluding the &#8221;.php&#8221; name extension).</
 <div class="section" id="whitespace-indentation-and-alignment">
 <h2>Whitespace, indentation and alignment<a class="headerlink" href="#whitespace-indentation-and-alignment" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Indentation MUST use only tabs.</li>
-<li>Alignment MUST use only spaces.</li>
+<li>Best practice: indentation SHOULD use only tabs.</li>
+<li>Best practice: alignment SHOULD use only spaces.</li>
+<li>If using tabs for anything, you MUST set the tab spacing to 4.</li>
 </ul>
-<p>The following code block would have a single tab at the beginning of
+<p>This will accommodate the widest range of developer environment options,
+while maintaining consistency of code appearance.</p>
+<p>Following the &#8220;best practice&#8221; above,
+the following code block would have a single tab at the beginning of
 each line containing braces, and two tabs at the beginning of the
 nested statements. No alignment is implied.:</p>
 <div class="highlight-ci"><div class="highlight"><pre><span class="p">{</span>
@@ -442,7 +452,8 @@ nested statements. No alignment is implied.:</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>The following code block would use spaces to have the assignment
+<p>Following the &#8220;best practice&#8221; above,
+the following code block would use spaces to have the assignment
 operators line up with each other:</p>
 <div class="highlight-ci"><div class="highlight"><pre><span class="p">{</span>
     <span class="nv">$first</span>    <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
@@ -454,7 +465,7 @@ operators line up with each other:</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">Our indenting and alignment convention differs from PSR-2, which
-uses spaces for indenting and alignment.</p>
+<strong>only</strong> uses spaces for both indenting and alignment.</p>
 </div>
 <ul>
 <li><p class="first">Unnecessary whitespace characters MUST NOT be present anywhere within a
@@ -465,6 +476,13 @@ well as any other whitespace usage that is not functionally required or
 explicitly described in this document.</p>
 </li>
 </ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">With conforming tab settings, alignment spacing should
+be preserved in all development environments.
+A pull request that deals only with tabs or spaces for alignment
+will not be favorably considered.</p>
+</div>
 </div>
 <div class="section" id="code">
 <h2>Code<a class="headerlink" href="#code" title="Permalink to this headline">¶</a></h2>
@@ -584,6 +602,33 @@ parentheses for clarity, as shown above.</p>
 </li>
 </ul>
 </div>
+<div class="section" id="control-structures">
+<h3>Control Structures<a class="headerlink" href="#control-structures" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first">Control structures, such as <strong>if/else</strong> statements, <strong>for/foreach</strong> statements, or
+<strong>while/do</strong> statements, MUST use a brace-surrounded block for their body
+segments.</p>
+<p>Good control structure examples:</p>
+<div class="highlight-ci"><div class="highlight"><pre><span class="k">if</span> <span class="p">(</span> <span class="nv">$foo</span> <span class="p">)</span>
+<span class="p">{</span>
+    <span class="nv">$bar</span> <span class="o">+=</span> <span class="nv">$baz</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">else</span>
+<span class="p">{</span>
+    <span class="nv">$baz</span> <span class="o">=</span> <span class="s1">&#39;bar&#39;</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Not-acceptable control structures:</p>
+<div class="highlight-ci"><div class="highlight"><pre><span class="k">if</span> <span class="p">(</span> <span class="nv">$foo</span> <span class="p">)</span> <span class="nv">$bar</span> <span class="o">=</span> <span class="nv">$oneThing</span> <span class="o">+</span> <span class="nv">$anotherThing</span> <span class="o">+</span> <span class="nv">$yetAnotherThing</span> <span class="o">+</span> <span class="nv">$evenMore</span><span class="p">;</span>
+
+<span class="k">if</span> <span class="p">(</span> <span class="nv">$foo</span> <span class="p">)</span> <span class="nv">$bar</span> <span class="o">+=</span> <span class="nv">$baz</span><span class="p">;</span>
+<span class="k">else</span> <span class="nv">$baz</span> <span class="o">=</span> <span class="s1">&#39;bar&#39;</span><span class="p">;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
 <div class="section" id="other">
 <h3>Other<a class="headerlink" href="#other" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
@@ -633,7 +678,7 @@ We use &#8220;Allman style&#8221; notation instead.</p>
   <div role="contentinfo">
     <p>
         &copy; Copyright 2014 - 2016, British Columbia Institute of Technology.
-       Last updated on Jul 19, 2016.
+       Last updated on Jul 20, 2016.
     </p>
   </div>
 
