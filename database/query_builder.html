@@ -149,7 +149,10 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../helpers/index.html">Helpers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../helpers/index.html">Helpers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../helpers/url_helper.html">URL Helper</a></li>
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../contributing/index.html">Contributing to CodeIgniter</a><ul>
@@ -299,7 +302,10 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../helpers/index.html">Helpers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../helpers/index.html">Helpers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../helpers/url_helper.html">URL Helper</a></li>
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../contributing/index.html">Contributing to CodeIgniter</a><ul>
@@ -663,6 +669,13 @@ searches.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">All values passed to this method are escaped automatically.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">All <tt class="docutils literal"><span class="pre">like*</span></tt> method variations can be forced to be perform case-insensitive searches by passing
+a fifth parameter of <tt class="docutils literal"><span class="pre">true</span></tt> to the method. This will use platform-specific features where available
+otherwise, will force the values to be lowercase, i.e. <tt class="docutils literal"><span class="pre">WHERE</span> <span class="pre">LOWER(column)</span> <span class="pre">LIKE</span> <span class="pre">'%search%'</span></tt>. This
+may require indexes to be made for <tt class="docutils literal"><span class="pre">LOWER(column)</span></tt> instead of <tt class="docutils literal"><span class="pre">column</span></tt> to be effective.</p>
 </div>
 <ol class="arabic">
 <li><p class="first"><strong>Simple key/value method:</strong></p>
@@ -2430,7 +2443,7 @@ a DELETE statement will be used instead.</p>
   <div role="contentinfo">
     <p>
         &copy; Copyright 2014 - 2016, British Columbia Institute of Technology.
-       Last updated on Jul 19, 2016.
+       Last updated on Jul 20, 2016.
     </p>
   </div>
 
