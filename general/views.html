@@ -32,7 +32,7 @@
   
     <link rel="top" title="CodeIgniter4 4.0.0-dev documentation" href="../index.html"/>
         <link rel="up" title="General Topics" href="index.html"/>
-        <link rel="next" title="Helper Functions" href="helpers.html"/>
+        <link rel="next" title="View Cells" href="view_cells.html"/>
         <link rel="prev" title="Controllers" href="controllers.html"/> 
 
   
@@ -92,7 +92,10 @@
 <li class="toctree-l2"><a class="reference internal" href="urls.html">CodeIgniter URLs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="controllers.html">Controllers</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="">Views</a></li>
-<li class="toctree-l2"><a class="reference internal" href="helpers.html">Helpers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="view_cells.html">View Cells</a></li>
+<li class="toctree-l2"><a class="reference internal" href="view_renderer.html">View Renderer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="view_parser.html">View Parser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="helpers.html">Helper Functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="core_classes.html">Creating Core System Classes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="hooks.html">Hooks - Extending the Framework Core</a></li>
 <li class="toctree-l2"><a class="reference internal" href="common_functions.html">Global Functions and Constants</a></li>
@@ -121,7 +124,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../libraries/message.html">HTTP Messages</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../libraries/request.html">Request Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../libraries/response.html">HTTP Responses</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../libraries/response.html#class-reference">Class Reference</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../libraries/security.html">Security Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../libraries/sessions.html">Session Library</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../libraries/uploaded_files.html">Working with Uploaded Files</a></li>
@@ -245,7 +247,10 @@
 <li class="toctree-l2"><a class="reference internal" href="urls.html">CodeIgniter URLs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="controllers.html">Controllers</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="">Views</a></li>
-<li class="toctree-l2"><a class="reference internal" href="helpers.html">Helpers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="view_cells.html">View Cells</a></li>
+<li class="toctree-l2"><a class="reference internal" href="view_renderer.html">View Renderer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="view_parser.html">View Parser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="helpers.html">Helper Functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="core_classes.html">Creating Core System Classes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="hooks.html">Hooks - Extending the Framework Core</a></li>
 <li class="toctree-l2"><a class="reference internal" href="common_functions.html">Global Functions and Constants</a></li>
@@ -274,7 +279,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../libraries/message.html">HTTP Messages</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../libraries/request.html">Request Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../libraries/response.html">HTTP Responses</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../libraries/response.html#class-reference">Class Reference</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../libraries/security.html">Security Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../libraries/sessions.html">Session Library</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../libraries/uploaded_files.html">Working with Uploaded Files</a></li>
@@ -371,10 +375,10 @@ not read the <a class="reference internal" href="controllers.html"><em>Controlle
 <p>Using your text editor, create a file called <tt class="docutils literal"><span class="pre">BlogView.php</span></tt> and put this in it:</p>
 <div class="highlight-ci"><div class="highlight"><pre><span class="o">&lt;</span><span class="nx">html</span><span class="o">&gt;</span>
 <span class="o">&lt;</span><span class="nx">head</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="nx">title</span><span class="o">&gt;</span><span class="nx">My</span> <span class="nx">Blog</span><span class="o">&lt;/</span><span class="nx">title</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">title</span><span class="o">&gt;</span><span class="nx">My</span> <span class="nx">Blog</span><span class="o">&lt;/</span><span class="nx">title</span><span class="o">&gt;</span>
 <span class="o">&lt;/</span><span class="nx">head</span><span class="o">&gt;</span>
 <span class="o">&lt;</span><span class="nx">body</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Welcome</span> <span class="nx">to</span> <span class="nx">my</span> <span class="nx">Blog</span><span class="o">!&lt;/</span><span class="nx">h1</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Welcome</span> <span class="nx">to</span> <span class="nx">my</span> <span class="nx">Blog</span><span class="o">!&lt;/</span><span class="nx">h1</span><span class="o">&gt;</span>
 <span class="o">&lt;/</span><span class="nx">body</span><span class="o">&gt;</span>
 <span class="o">&lt;/</span><span class="nx">html</span><span class="o">&gt;</span>
 </pre></div>
@@ -422,7 +426,7 @@ content view, and a footer view. That might look something like this:</p>
         <span class="k">public</span> <span class="k">function</span> <span class="nf">index</span><span class="p">()</span>
         <span class="p">{</span>
                 <span class="nv">$data</span> <span class="o">=</span> <span class="p">[</span>
-                        <span class="s1">&#39;page_title&#39;</span> <span class="o">=</span> <span class="s1">&#39;Your title&#39;</span>
+                        <span class="s1">&#39;page_title&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Your title&#39;</span>
                 <span class="p">];</span>
 
                 <span class="k">echo</span> <span class="nx">view</span><span class="p">(</span><span class="s1">&#39;header&#39;</span><span class="p">);</span>
@@ -499,10 +503,10 @@ Here&#8217;s an example:</p>
 <p>Now open your view file and change the text to variables that correspond to the array keys in your data:</p>
 <div class="highlight-ci"><div class="highlight"><pre><span class="o">&lt;</span><span class="nx">html</span><span class="o">&gt;</span>
 <span class="o">&lt;</span><span class="nx">head</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="nx">title</span><span class="o">&gt;&lt;?=</span> <span class="nv">$title</span> <span class="cp">?&gt;</span><span class="nt">&lt;/title&gt;</span>
+    <span class="o">&lt;</span><span class="nx">title</span><span class="o">&gt;&lt;?=</span> <span class="nv">$title</span> <span class="cp">?&gt;</span><span class="nt">&lt;/title&gt;</span>
 <span class="nt">&lt;/head&gt;</span>
 <span class="nt">&lt;body&gt;</span>
-<span class="nt">&lt;h1&gt;</span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$heading</span> <span class="cp">?&gt;</span><span class="nt">&lt;/h1&gt;</span>
+    <span class="nt">&lt;h1&gt;</span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$heading</span> <span class="cp">?&gt;</span><span class="nt">&lt;/h1&gt;</span>
 <span class="nt">&lt;/body&gt;</span>
 <span class="nt">&lt;/html&gt;</span>
 </pre></div>
@@ -520,83 +524,6 @@ into the <cite>$option</cite> array in the third parameter.</p>
 
 <span class="k">echo</span> <span class="nx">view</span><span class="p">(</span><span class="s1">&#39;blogview&#39;</span><span class="p">,</span> <span class="nv">$data</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;saveData&#39;</span> <span class="o">=&gt;</span> <span class="k">true</span><span class="p">]);</span>
 </pre></div>
-</div>
-</div>
-<div class="section" id="direct-access-to-view-class">
-<h2>Direct Access To View Class<a class="headerlink" href="#direct-access-to-view-class" title="Permalink to this headline">¶</a></h2>
-<p>The <tt class="docutils literal"><span class="pre">view()</span></tt> function is a convenience method that grabs an instance of the <tt class="docutils literal"><span class="pre">renderer</span></tt> service,
-sets the data, and renders the view. While this is often exactly what you want, you may find times where you
-want to work with it more directly. In that case you can access the View service directly:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$renderer</span> <span class="o">=</span> <span class="nx">\Config\Services</span><span class="o">::</span><span class="na">renderer</span><span class="p">();</span>
-</pre></div>
-</div>
-<div class="admonition important">
-<p class="first admonition-title">Important</p>
-<p class="last">You should create services only within controllers. If you need access to the View class
-from a library, you should set that as a dependency in the constructor.</p>
-</div>
-<p>Then you can use any of the three standard methods that it provides.</p>
-<ul>
-<li><dl class="first docutils">
-<dt><strong>render(&#8216;view_name&#8217;, array $options)</strong> Performs the rendering of the view and its data. The $options array is</dt>
-<dd><p class="first last">unused by default, but provided for third-party libraries to use when integrating with different template engines.</p>
-</dd>
-</dl>
-</li>
-<li><dl class="first docutils">
-<dt><strong>setVar(&#8216;name&#8217;, &#8216;value&#8217;, $context=null)</strong> Sets a single piece of dynamic data.  $context specifies the context</dt>
-<dd><p class="first last">to escape for. Defaults to no escaping. Set to empty value to skip escaping.</p>
-</dd>
-</dl>
-</li>
-<li><dl class="first docutils">
-<dt><strong>setData($array, $context=null)</strong> Takes an array of key/value pairs for dynamic data and optionally escapes it.</dt>
-<dd><p class="first last">$context specifies the context to escape for. Defaults to no escaping. Set to empty value to skip escaping.</p>
-</dd>
-</dl>
-</li>
-</ul>
-<p>The <cite>setVar()</cite> and <cite>setData()</cite> methods are chainable, allowing you to combine a number of different calls together in a chain:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nx">service</span><span class="p">(</span><span class="s1">&#39;renderer&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">setVar</span><span class="p">(</span><span class="s1">&#39;one&#39;</span><span class="p">,</span> <span class="nv">$one</span><span class="p">)</span>
-                   <span class="o">-&gt;</span><span class="na">setVar</span><span class="p">(</span><span class="s1">&#39;two&#39;</span><span class="p">,</span> <span class="nv">$two</span><span class="p">)</span>
-                   <span class="o">-&gt;</span><span class="na">render</span><span class="p">(</span><span class="s1">&#39;myView&#39;</span><span class="p">);</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="escaping-data">
-<h2>Escaping Data<a class="headerlink" href="#escaping-data" title="Permalink to this headline">¶</a></h2>
-<p>When you pass data to the <tt class="docutils literal"><span class="pre">setVar()</span></tt> and <tt class="docutils literal"><span class="pre">setData()</span></tt> functions you have the option to escape the data to protect
-against cross-site scripting attacks. As the last parameter in either method, you can pass the desired context to
-escape the data for. See below for context descriptions.</p>
-<p>If you don&#8217;t want the data to be escaped, you can pass <cite>null</cite> or <cite>raw</cite> as the final parameter to each function:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$renderer</span><span class="o">-&gt;</span><span class="na">setVar</span><span class="p">(</span><span class="s1">&#39;one&#39;</span><span class="p">,</span> <span class="nv">$one</span><span class="p">,</span> <span class="s1">&#39;raw&#39;</span><span class="p">);</span>
-</pre></div>
-</div>
-<p>If you choose not to escape data, or you are passing in an object instance, you can manually escape the data within
-the view with the <tt class="docutils literal"><span class="pre">esc()</span></tt> function. The first parameter is the string to escape. The second parameter is the
-context to escape the data for (see below):</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="o">&lt;?=</span> <span class="nx">esc</span><span class="p">(</span><span class="nv">$object</span><span class="o">-&gt;</span><span class="na">getStat</span><span class="p">())</span> <span class="cp">?&gt;</span>
-</pre></div>
-</div>
-<div class="section" id="escaping-contexts">
-<h3>Escaping Contexts<a class="headerlink" href="#escaping-contexts" title="Permalink to this headline">¶</a></h3>
-<p>By default, the <tt class="docutils literal"><span class="pre">esc()</span></tt> and, in turn, the <tt class="docutils literal"><span class="pre">setVar()</span></tt> and <tt class="docutils literal"><span class="pre">setData()</span></tt> functions assume that the data you want to
-escape is intended to be used within standard HTML. However, if the data is intended for use in Javascript, CSS,
-or in an href attribute, you would need different escaping rules to be effective. You can pass in the name of the
-context as the second parameter. Valid contexts are &#8216;html&#8217;, &#8216;js&#8217;, &#8216;css&#8217;, &#8216;url&#8217;, and &#8216;attr&#8217;:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="o">&lt;</span><span class="nx">a</span> <span class="nx">href</span><span class="o">=</span><span class="s2">&quot;&lt;?= esc(</span><span class="si">$url</span><span class="s2">, &#39;url&#39;) ?&gt;&quot;</span> <span class="nx">data</span><span class="o">-</span><span class="nx">foo</span><span class="o">=</span><span class="s2">&quot;&lt;?= esc(</span><span class="si">$bar</span><span class="s2">, &#39;attr&#39;) ?&gt;&quot;</span><span class="o">&gt;</span><span class="nx">Some</span> <span class="nx">Link</span><span class="o">&lt;/</span><span class="nx">a</span><span class="o">&gt;</span>
-
-<span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span>
-        <span class="k">var</span> <span class="nx">siteName</span> <span class="o">=</span> <span class="s1">&#39;&lt;?= esc($siteName, &#39;</span><span class="nx">js</span><span class="s1">&#39;) ?&gt;&#39;</span><span class="p">;</span>
-<span class="o">&lt;/</span><span class="nx">script</span><span class="o">&gt;</span>
-
-<span class="o">&lt;</span><span class="nx">style</span><span class="o">&gt;</span>
-        <span class="nx">body</span> <span class="p">{</span>
-                <span class="nx">background</span><span class="o">-</span><span class="nx">color</span><span class="o">:</span> <span class="o">&lt;?=</span> <span class="nx">esc</span><span class="p">(</span><span class="s1">&#39;bgColor&#39;</span><span class="p">,</span> <span class="s1">&#39;css&#39;</span><span class="p">)</span> <span class="cp">?&gt;</span>
-        }
-<span class="nt">&lt;/style&gt;</span>
-</pre></div>
-</div>
 </div>
 </div>
 <div class="section" id="creating-loops">
@@ -643,70 +570,6 @@ typically be in the form of a multi-dimensional array.</p>
 </pre></div>
 </div>
 </div>
-<div class="section" id="view-cells">
-<h2>View Cells<a class="headerlink" href="#view-cells" title="Permalink to this headline">¶</a></h2>
-<p>View Cells allow you to insert HTML that is generated outside of your controller. It simply calls the specified
-class and method, which must return valid HTML. This method could be in an callable method, found in any class
-that the autoloader can locate. The only restriction is that the class can not have any constructor parameters.
-This is intended to be used within views, and is a great aid to modularizing your code.</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="o">&lt;?=</span> <span class="nx">view_cell</span><span class="p">(</span><span class="s1">&#39;\App\Libraries\Blog::recentPosts&#39;</span><span class="p">)</span> <span class="cp">?&gt;</span>
-</pre></div>
-</div>
-<p>In this example, the class <tt class="docutils literal"><span class="pre">App\Libraries\Blog</span></tt> is loaded, and the method <tt class="docutils literal"><span class="pre">recentPosts()</span></tt> is ran. That method
-must return a string with the generated HTML. The method used can be either a static method or not. Either way works.</p>
-<div class="section" id="cell-parameters">
-<h3>Cell Parameters<a class="headerlink" href="#cell-parameters" title="Permalink to this headline">¶</a></h3>
-<p>You can further refine the call by passing a string with a list of parameters in the second parameter that are passed
-to the method as an array of key/value pairs, or a comma-seperated string of key/value pairs:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="c1">// Passing Parameter Array</span>
-<span class="o">&lt;?=</span> <span class="nx">view_cell</span><span class="p">(</span><span class="s1">&#39;\App\Libraries\Blog::recentPosts&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;category&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;codeigniter&#39;</span><span class="p">,</span> <span class="s1">&#39;limit&#39;</span> <span class="o">=&gt;</span> <span class="mi">5</span><span class="p">])</span> <span class="cp">?&gt;</span>
-
-// Passing Parameter String
-<span class="cp">&lt;?</span><span class="o">=</span> <span class="nx">view_cell</span><span class="p">(</span><span class="s1">&#39;\App\Libraries\Blog::recentPosts&#39;</span><span class="p">,</span> <span class="s1">&#39;category=codeigniter, limit=5&#39;</span><span class="p">)</span> <span class="cp">?&gt;</span>
-
-public function recentPosts(array $params=[])
-{
-    $posts = $this-&gt;blogModel-&gt;where(&#39;category&#39;, $params[&#39;category&#39;])
-                             -&gt;orderBy(&#39;published_on&#39;, &#39;desc&#39;)
-                             -&gt;limit($params[&#39;limit&#39;])
-                             -&gt;get();
-
-    return view(&#39;recentPosts&#39;, [&#39;posts&#39; =&gt; $posts]);
-}
-</pre></div>
-</div>
-<p>Additionally, you can use parameter names that match the parameter variables in the method for better readability.
-When you use it this way, all of the parameters must always be specified in the view cell call:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="o">&lt;?=</span> <span class="nx">view_cell</span><span class="p">(</span><span class="s1">&#39;\App\Libraries\Blog::recentPosts&#39;</span><span class="p">,</span> <span class="s1">&#39;category=codeigniter, limit=5&#39;</span><span class="p">)</span> <span class="cp">?&gt;</span>
-
-public function recentPosts(int $limit, string $category)
-{
-    $posts = $this-&gt;blogModel-&gt;where(&#39;category&#39;, $category)
-                             -&gt;orderBy(&#39;published_on&#39;, &#39;desc&#39;)
-                             -&gt;limit($limit)
-                             -&gt;get();
-
-    return view(&#39;recentPosts&#39;, [&#39;posts&#39; =&gt; $posts]);
-}
-</pre></div>
-</div>
-</div>
-<div class="section" id="cell-caching">
-<h3>Cell Caching<a class="headerlink" href="#cell-caching" title="Permalink to this headline">¶</a></h3>
-<p>You can cache the results of the view cell call by passing the number of seconds to cache the data for as the
-third parameter. This will use the currently configured cache engine.</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="c1">// Cache the view for 5 minutes</span>
-<span class="o">&lt;?=</span> <span class="nx">view_cell</span><span class="p">(</span><span class="s1">&#39;\App\Libraries\Blog::recentPosts&#39;</span><span class="p">,</span> <span class="s1">&#39;limit=5&#39;</span><span class="p">,</span> <span class="mi">300</span><span class="p">)</span> <span class="cp">?&gt;</span>
-</pre></div>
-</div>
-<p>You can provide a custom name to use instead of the auto-generated one if you like, by passing the new name
-as the fourth parameter.:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="c1">// Cache the view for 5 minutes</span>
-<span class="o">&lt;?=</span> <span class="nx">view_cell</span><span class="p">(</span><span class="s1">&#39;\App\Libraries\Blog::recentPosts&#39;</span><span class="p">,</span> <span class="s1">&#39;limit=5&#39;</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="s1">&#39;newcacheid&#39;</span><span class="p">)</span> <span class="cp">?&gt;</span>
-</pre></div>
-</div>
-</div>
-</div>
 </div>
 
 
@@ -715,7 +578,7 @@ as the fourth parameter.:</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="helpers.html" class="btn btn-neutral float-right" title="Helper Functions">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="view_cells.html" class="btn btn-neutral float-right" title="View Cells">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="controllers.html" class="btn btn-neutral" title="Controllers"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -728,7 +591,7 @@ as the fourth parameter.:</p>
   <div role="contentinfo">
     <p>
         &copy; Copyright 2014 - 2016, British Columbia Institute of Technology.
-       Last updated on Jul 20, 2016.
+       Last updated on Jul 22, 2016.
     </p>
   </div>
 

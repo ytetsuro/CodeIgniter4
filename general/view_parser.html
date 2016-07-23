@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Database Reference &mdash; CodeIgniter4 4.0.0-dev documentation</title>
+  <title>View Parser &mdash; CodeIgniter4 4.0.0-dev documentation</title>
   
 
   
@@ -31,8 +31,9 @@
 
   
     <link rel="top" title="CodeIgniter4 4.0.0-dev documentation" href="../index.html"/>
-        <link rel="next" title="Database Quick Start: Example Code" href="examples.html"/>
-        <link rel="prev" title="Working with URIs" href="../libraries/uri.html"/> 
+        <link rel="up" title="General Topics" href="index.html"/>
+        <link rel="next" title="Helper Functions" href="helpers.html"/>
+        <link rel="prev" title="View Renderer" href="view_renderer.html"/> 
 
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
@@ -85,30 +86,30 @@
 </ul>
 </li>
 </ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../general/index.html">General Topics</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../general/configuration.html">Working With Configuration Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../general/urls.html">CodeIgniter URLs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../general/controllers.html">Controllers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../general/views.html">Views</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../general/view_cells.html">View Cells</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../general/view_renderer.html">View Renderer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../general/view_parser.html">View Parser</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../general/helpers.html">Helper Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../general/core_classes.html">Creating Core System Classes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../general/hooks.html">Hooks - Extending the Framework Core</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../general/common_functions.html">Global Functions and Constants</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../general/routing.html">URI Routing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../general/filters.html">Controller Filters</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../general/logging.html">Logging Information</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../general/errors.html">Error Handling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../general/debugging.html">Debugging Your Application</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../general/caching.html">Web Page Caching</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../general/cli.html">Running via the CLI</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../general/managing_apps.html">Managing your Applications</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../general/environments.html">Handling Multiple Environments</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../general/alternative_php.html">Alternate PHP Syntax for View Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../general/testing.html">Testing</a></li>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">General Topics</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="configuration.html">Working With Configuration Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="urls.html">CodeIgniter URLs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controllers.html">Controllers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="views.html">Views</a></li>
+<li class="toctree-l2"><a class="reference internal" href="view_cells.html">View Cells</a></li>
+<li class="toctree-l2"><a class="reference internal" href="view_renderer.html">View Renderer</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">View Parser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="helpers.html">Helper Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="core_classes.html">Creating Core System Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hooks.html">Hooks - Extending the Framework Core</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common_functions.html">Global Functions and Constants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="routing.html">URI Routing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="filters.html">Controller Filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logging.html">Logging Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="errors.html">Error Handling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="debugging.html">Debugging Your Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="caching.html">Web Page Caching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cli.html">Running via the CLI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="managing_apps.html">Managing your Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="environments.html">Handling Multiple Environments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="alternative_php.html">Alternate PHP Syntax for View Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html">Testing</a></li>
 </ul>
 </li>
 </ul>
@@ -130,22 +131,22 @@
 </ul>
 </li>
 </ul>
-<ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="">Database Reference</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="examples.html">Quick Start: Usage Examples</a></li>
-<li class="toctree-l2"><a class="reference internal" href="configuration.html">Database Configuration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="connecting.html">Connecting to a Database</a></li>
-<li class="toctree-l2"><a class="reference internal" href="queries.html">Running Queries</a></li>
-<li class="toctree-l2"><a class="reference internal" href="results.html">Generating Query Results</a></li>
-<li class="toctree-l2"><a class="reference internal" href="helpers.html">Query Helper Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="query_builder.html">Query Builder Class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="transactions.html">Transactions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="metadata.html">Getting MetaData</a></li>
-<li class="toctree-l2"><a class="reference internal" href="call_function.html">Custom Function Calls</a></li>
-<li class="toctree-l2"><a class="reference internal" href="model.html">Using CodeIgniter&#8217;s Model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="forge.html">Database Manipulation with Database Forge</a></li>
-<li class="toctree-l2"><a class="reference internal" href="migration.html">Database Migrations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="seeds.html">Database Seeding</a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../database/index.html">Database Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../database/examples.html">Quick Start: Usage Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../database/configuration.html">Database Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../database/connecting.html">Connecting to a Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../database/queries.html">Running Queries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../database/results.html">Generating Query Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../database/helpers.html">Query Helper Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../database/query_builder.html">Query Builder Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../database/transactions.html">Transactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../database/metadata.html">Getting MetaData</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../database/call_function.html">Custom Function Calls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../database/model.html">Using CodeIgniter&#8217;s Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../database/forge.html">Database Manipulation with Database Forge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../database/migration.html">Database Migrations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../database/seeds.html">Database Seeding</a></li>
 </ul>
 </li>
 </ul>
@@ -240,30 +241,30 @@
 </ul>
 </li>
 </ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../general/index.html">General Topics</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../general/configuration.html">Working With Configuration Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../general/urls.html">CodeIgniter URLs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../general/controllers.html">Controllers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../general/views.html">Views</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../general/view_cells.html">View Cells</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../general/view_renderer.html">View Renderer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../general/view_parser.html">View Parser</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../general/helpers.html">Helper Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../general/core_classes.html">Creating Core System Classes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../general/hooks.html">Hooks - Extending the Framework Core</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../general/common_functions.html">Global Functions and Constants</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../general/routing.html">URI Routing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../general/filters.html">Controller Filters</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../general/logging.html">Logging Information</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../general/errors.html">Error Handling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../general/debugging.html">Debugging Your Application</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../general/caching.html">Web Page Caching</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../general/cli.html">Running via the CLI</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../general/managing_apps.html">Managing your Applications</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../general/environments.html">Handling Multiple Environments</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../general/alternative_php.html">Alternate PHP Syntax for View Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../general/testing.html">Testing</a></li>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">General Topics</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="configuration.html">Working With Configuration Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="urls.html">CodeIgniter URLs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controllers.html">Controllers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="views.html">Views</a></li>
+<li class="toctree-l2"><a class="reference internal" href="view_cells.html">View Cells</a></li>
+<li class="toctree-l2"><a class="reference internal" href="view_renderer.html">View Renderer</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">View Parser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="helpers.html">Helper Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="core_classes.html">Creating Core System Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hooks.html">Hooks - Extending the Framework Core</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common_functions.html">Global Functions and Constants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="routing.html">URI Routing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="filters.html">Controller Filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logging.html">Logging Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="errors.html">Error Handling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="debugging.html">Debugging Your Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="caching.html">Web Page Caching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cli.html">Running via the CLI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="managing_apps.html">Managing your Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="environments.html">Handling Multiple Environments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="alternative_php.html">Alternate PHP Syntax for View Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html">Testing</a></li>
 </ul>
 </li>
 </ul>
@@ -285,22 +286,22 @@
 </ul>
 </li>
 </ul>
-<ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="">Database Reference</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="examples.html">Quick Start: Usage Examples</a></li>
-<li class="toctree-l2"><a class="reference internal" href="configuration.html">Database Configuration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="connecting.html">Connecting to a Database</a></li>
-<li class="toctree-l2"><a class="reference internal" href="queries.html">Running Queries</a></li>
-<li class="toctree-l2"><a class="reference internal" href="results.html">Generating Query Results</a></li>
-<li class="toctree-l2"><a class="reference internal" href="helpers.html">Query Helper Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="query_builder.html">Query Builder Class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="transactions.html">Transactions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="metadata.html">Getting MetaData</a></li>
-<li class="toctree-l2"><a class="reference internal" href="call_function.html">Custom Function Calls</a></li>
-<li class="toctree-l2"><a class="reference internal" href="model.html">Using CodeIgniter&#8217;s Model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="forge.html">Database Manipulation with Database Forge</a></li>
-<li class="toctree-l2"><a class="reference internal" href="migration.html">Database Migrations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="seeds.html">Database Seeding</a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../database/index.html">Database Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../database/examples.html">Quick Start: Usage Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../database/configuration.html">Database Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../database/connecting.html">Connecting to a Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../database/queries.html">Running Queries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../database/results.html">Generating Query Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../database/helpers.html">Query Helper Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../database/query_builder.html">Query Builder Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../database/transactions.html">Transactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../database/metadata.html">Getting MetaData</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../database/call_function.html">Custom Function Calls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../database/model.html">Using CodeIgniter&#8217;s Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../database/forge.html">Database Manipulation with Database Forge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../database/migration.html">Database Migrations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../database/seeds.html">Database Seeding</a></li>
 </ul>
 </li>
 </ul>
@@ -346,7 +347,9 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../index.html">Docs</a> &raquo;</li>
       
-    <li>Database Reference</li>
+        <li><a href="index.html">General Topics</a> &raquo;</li>
+      
+    <li>View Parser</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -358,55 +361,9 @@
 </div>
           <div role="main" class="document">
             
-  <div class="section" id="database-reference">
-<h1>Database Reference<a class="headerlink" href="#database-reference" title="Permalink to this headline">¶</a></h1>
-<p>CodeIgniter comes with a full-featured and very fast abstracted database
-class that supports both traditional structures and Query Builder
-patterns. The database functions offer clear, simple syntax.</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="examples.html">Quick Start: Usage Examples</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="configuration.html">Database Configuration</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="connecting.html">Connecting to a Database</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="queries.html">Running Queries</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="results.html">Generating Query Results</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="helpers.html">Query Helper Functions</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="query_builder.html">Query Builder Class</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="transactions.html">Transactions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="metadata.html">Getting MetaData</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="call_function.html">Custom Function Calls</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="model.html">Using CodeIgniter&#8217;s Model</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="forge.html">Database Manipulation with Database Forge</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="migration.html">Database Migrations</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="seeds.html">Database Seeding</a><ul class="simple">
-</ul>
-</li>
-</ul>
-</div>
+  <div class="section" id="view-parser">
+<h1>View Parser<a class="headerlink" href="#view-parser" title="Permalink to this headline">¶</a></h1>
+<p>Coming soon :)</p>
 </div>
 
 
@@ -415,10 +372,10 @@ patterns. The database functions offer clear, simple syntax.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="examples.html" class="btn btn-neutral float-right" title="Database Quick Start: Example Code">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="helpers.html" class="btn btn-neutral float-right" title="Helper Functions">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../libraries/uri.html" class="btn btn-neutral" title="Working with URIs"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="view_renderer.html" class="btn btn-neutral" title="View Renderer"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
