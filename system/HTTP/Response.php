@@ -366,8 +366,12 @@ class Response extends Message implements ResponseInterface
 	 *
 	 * @return Response
 	 */
-	public function setContentType(string $mime, string $charset = 'UTF-8')
+	public function setContentType(string $mime, ?string $charset = null)
 	{
+		if ($charset === null) {
+			$charset = $this->charset;
+		}
+
 		// add charset attribute if not already there and provided as parm
 		if ((strpos($mime, 'charset=') < 1) && ! empty($charset))
 		{
