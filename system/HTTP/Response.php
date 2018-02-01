@@ -761,9 +761,22 @@ class Response extends Message implements ResponseInterface
 			@ob_clean();
 		}
 
+		$utf8_filename = $filename;
+		if ($this->charset !== 'UTF-8')
+		{
+			if (extension_loaded('iconv'))
+			{
+				$utf8_filename = @iconv($this->charset, 'UTF-8', $filename);
+			}
+			elseif (extension_loaded('mbstring'))
+			{
+				$utf8_filename = mb_convert_encoding($filename, 'UTF-8', $this->charset);
+			}
+		}
+
 		// Generate the server headers
 		header('Content-Type: ' . $mime);
-		header('Content-Disposition: attachment; filename="' . $filename . '"');
+		header('Content-Disposition: attachment; filename="' . $filename . '"; filename*=UTF-8\'\'' . rawurlencode($utf8_filename));
 		header('Expires: 0');
 		header('Content-Transfer-Encoding: binary');
 		header('Content-Length: ' . $filesize);
