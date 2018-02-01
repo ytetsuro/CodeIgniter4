@@ -205,6 +205,13 @@ class Response extends Message implements ResponseInterface
 	 */
 	protected $cookieHTTPOnly = false;
 
+	/**
+	 * The current charset code for this response.
+	 *
+	 * @var string
+	 */
+	protected $charset = 'UTF-8';
+
 	//--------------------------------------------------------------------
 
 	/**
@@ -223,6 +230,11 @@ class Response extends Message implements ResponseInterface
 		{
 			$this->CSP = new ContentSecurityPolicy(new \Config\ContentSecurityPolicy());
 			$this->CSPEnabled = true;
+		}
+
+		if (!empty($config->charset))
+		{
+			$this->charset = $config->charset;
 		}
 
 		$this->cookiePrefix = $config->cookiePrefix;
