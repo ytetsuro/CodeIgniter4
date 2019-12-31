@@ -1493,9 +1493,12 @@ abstract class BaseConnection implements ConnectionInterface
 	public function callFunction(string $functionName, ...$params): bool
 	{
 		$driver = strtolower($this->DBDriver) . '_';
-		if ($this->DBDriver === 'postgre') {
+		if ($this->DBDriver === 'postgre')
+		{
 			$driver = 'pg';
-		} elseif ($this->DBDriver === 'oci8') {
+		}
+		elseif ($this->DBDriver === 'oci8')
+		{
 			$driver = 'oci_';
 		}
 
