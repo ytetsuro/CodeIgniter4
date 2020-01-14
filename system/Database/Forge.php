@@ -113,10 +113,10 @@ class Forge
 	protected $createDatabaseIfStr = null;
 
 	/**
-     * CHECK DATABASE EXIST statement
-     *
-     * @var string
-     */
+	 * CHECK DATABASE EXIST statement
+	 *
+	 * @var string
+	 */
 	protected $checkDatabaseExistStr = null;
 
 	/**
@@ -214,7 +214,7 @@ class Forge
 	/**
 	 * Create database
 	 *
-	 * @param string $dbName
+	 * @param string  $dbName
 	 * @param boolean $ifNotExists Whether to add IF NOT EXISTS condition
 	 *
 	 * @return boolean
@@ -230,7 +230,7 @@ class Forge
 			}
 			$ifNotExists = false;
 		}
-		
+
 		if ($this->createDatabaseStr === false)
 		{
 			if ($this->db->DBDebug)
